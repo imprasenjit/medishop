@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title><?php echo (isset($title)) ? $title :"Online & Offline Inventory System" ?></title>
+        <title><?php echo (isset($title)) ? $title :"Netrocare System" ?></title>
         <?php
             $CI =& get_instance();
             $CI->load->model('Web_settings');

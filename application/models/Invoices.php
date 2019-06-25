@@ -83,7 +83,7 @@ class Invoices extends CI_Model {
 	public function pos_customer_setup(){
 		return $this->db->select('*')
 						->from('customer_information')
-						->where('customer_name','Walking Customer')
+						->where('customer_name','Cash')
 						->get()
 						->row();
 	}

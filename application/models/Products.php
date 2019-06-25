@@ -141,7 +141,7 @@ class Products extends CI_Model {
 		$query = $this->db->get();
 		$affected_row=$this->db->affected_rows();
 
-		if($affected_row == 0) {
+		//if($affected_row == 0) {
 			$this->db->where('product_id',$product_id);
 			$this->db->delete('product_information'); 
 			$this->session->set_userdata(array('message'=>display('successfully_delete')));
@@ -157,10 +157,10 @@ class Products extends CI_Model {
 			$productList = json_encode($json_product);
 			file_put_contents($cache_file,$productList);
 			return true;
-		}else{
-			$this->session->set_userdata(array('message'=>display('you_cant_delete_this_product')));
-			return false;
-		}	
+		// }else{
+		// 	$this->session->set_userdata(array('message'=>display('you_cant_delete_this_product')));
+		// 	return false;
+		// }	
 	}
 	//Product By Search 
 	public function product_search_item($product_id)
