@@ -99,6 +99,12 @@
                                         <input class="form-control" name="product_location" type="text" id="product_location" placeholder="<?php echo display('product_location') ?>">
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="hsn_code" class="col-sm-4 col-form-label"><?php echo display('hsn_code') ?></label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" name="hsn_code" type="text" id="hsn_code" placeholder="<?php echo display('hsn_code') ?>">
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-sm-6">
                                <div class="form-group row">

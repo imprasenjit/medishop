@@ -98,6 +98,12 @@
                                         <input class="form-control" name="product_location" type="text" id="product_location" placeholder="<?php echo display('product_location') ?>" value="{product_location}">
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="hsn_code" class="col-sm-4 col-form-label"><?php echo display('hsn_code') ?></label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" name="hsn_code" type="text" id="hsn_code" placeholder="<?php echo display('hsn_code') ?>" value="{hsn_code}">
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-sm-6">
                                <div class="form-group row">
@@ -171,10 +177,10 @@
                                         </td>
                                            <td class="text-right">
                                             <select name="tax" class="form-control">
-                                            {tax_list}
-                                                <option value="{tax}">{tax} % 
+                                            <?php foreach($tax_list as $value){?>
+                                                <option value="<?=$value->tax;?>" <?= ($value->tax==$tax_selected)?"selected":""; ?>><?=$value->tax;?> % 
                                                 </option>
-                                            {/tax_list}
+                                            <?php }?>
                                             </select>
                                         </td>
                                         <td class="text-right">

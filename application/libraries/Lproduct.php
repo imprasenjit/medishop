@@ -74,7 +74,7 @@ class Lproduct {
 		@$category_id= $product_detail[0]['category_id'];
 		$supplier_list=$CI->Suppliers->supplier_list("110","0");
 		$supplier_selected=$CI->Suppliers->supplier_search_item($supplier_id);
-
+		$tax_selected=$product_detail[0]['tax'];
 		$category_list = $CI->Categories->category_list();
 		$category_selected=$CI->Categories->category_search_item($category_id);
 		$tax_list = $CI->Products->retrieve_product_tax();
@@ -86,6 +86,7 @@ class Lproduct {
 			'supplier_price' 		=> $product_detail[0]['supplier_price'],
 			'product_model' 		=> $product_detail[0]['product_model'],
 			'generic_name' 			=> $product_detail[0]['generic_name'],
+			'hsn_code' 			=> $product_detail[0]['hsn_code'],
 			'box_size' 				=> $product_detail[0]['box_size'],
 			'expire_date' 			=> $product_detail[0]['expire_date'],
 			'product_location' 		=> $product_detail[0]['product_location'],
@@ -96,7 +97,9 @@ class Lproduct {
 			'category_list'			=> $category_list,
 			'category_selected'		=> $category_selected,
 			'tax_list'				=>$tax_list,
+			'tax_selected'				=>$tax_selected,
 			);
+			//echo '<pre>';print_r($data);die;
 		$chapterList = $CI->parser->parse('product/edit_product_form',$data,true);
 		
 		return $chapterList;

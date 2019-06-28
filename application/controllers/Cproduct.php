@@ -67,6 +67,7 @@ class Cproduct extends CI_Controller {
 			'product_id' 			=> $this->generator(8),
 			'product_name' 			=> $this->input->post('product_name'),
 			'generic_name' 			=> $this->input->post('generic_name'),
+			'hsn_code' 				=> $this->input->post('hsn_code'),
 			'box_size' 				=> $this->input->post('box_size'),
 			'expire_date' 			=> $this->input->post('expire_date'),
 			'product_location' 		=> $this->input->post('product_location'),
