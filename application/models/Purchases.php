@@ -134,7 +134,8 @@ class Purchases extends CI_Model {
 		$this->db->join('supplier_information d','d.supplier_id = a.supplier_id');
 		$this->db->where('a.purchase_id',$purchase_id);
 		$this->db->order_by('a.purchase_details','asc');
-		$query = $this->db->get();
+		$query = $this->db->get_compiled_select();
+		echo $query;
 		if ($query->num_rows() > 0) {
 			return $query->result_array();	
 		}

@@ -84,10 +84,11 @@ class Lpurchase {
 		$CI->load->model('Suppliers');
 
 		$purchase_detail = $CI->Purchases->retrieve_purchase_editdata($purchase_id);
+
 		$supplier_id = $purchase_detail[0]['supplier_id'];
 		$supplier_list=$CI->Suppliers->supplier_list("110","0");
 		$supplier_selected=$CI->Suppliers->supplier_search_item($supplier_id);
-		
+		print_r($purchase_id);die();
 		if(!empty($purchase_detail)){
 			$i=0;
 			foreach($purchase_detail as $k=>$v){$i++;
@@ -108,6 +109,7 @@ class Lpurchase {
 			'supplier_selected'		=>	$supplier_selected,
 
 			);
+			print_r($data);
 		$chapterList = $CI->parser->parse('purchase/edit_purchase_form',$data,true);
 		return $chapterList;
 	}

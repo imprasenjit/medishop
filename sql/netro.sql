@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2019 at 07:36 PM
+-- Generation Time: Jun 28, 2019 at 08:22 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.26
 
@@ -139,7 +139,11 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('d3lu9fdhg6mjfff2t1h2i31mm8djgivo', '127.0.0.1', 1560534976, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536303533343835323b7369645f7765627c733a32393a2261796166524b64645270654a7a654b644a665252556679524b646a5864223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31393a22416c697368657220416b686d61746f76696368223b757365725f656d61696c7c733a31333a227465737440746573742e636f6d223b),
 ('ur9slgr3pbdq1ptok2a3em1gdm0gre4k', '::1', 1560791166, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536303739303535383b7369645f7765627c733a32393a227a7965586e79694b466a7a657961556664487961656a58706479636448223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31393a22416c697368657220416b686d61746f76696368223b757365725f656d61696c7c733a31333a227465737440746573742e636f6d223b),
 ('h13oi9iu8tl79puvhoiu53a5k2fvu28b', '::1', 1560878665, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536303837373534333b7369645f7765627c733a32383a2248617962656465707079666a586465586e79694b466a556664486261223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31393a22416c697368657220416b686d61746f76696368223b757365725f656d61696c7c733a31333a227465737440746573742e636f6d223b),
-('pv142epuepa0267od3h6ijji4rrev0sk', '::1', 1560964812, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536303935393938393b7369645f7765627c733a32393a226665637a52644a63556665586e79694b466a7a7a65637965586e79694b223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31393a22416c697368657220416b686d61746f76696368223b757365725f656d61696c7c733a31333a227465737440746573742e636f6d223b);
+('pv142epuepa0267od3h6ijji4rrev0sk', '::1', 1560965876, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536303935393938393b7369645f7765627c733a32393a226665637a52644a63556665586e79694b466a7a7a65637965586e79694b223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31393a22416c697368657220416b686d61746f76696368223b757365725f656d61696c7c733a31333a227465737440746573742e636f6d223b),
+('koeq0cbg2827kna778pdl2f58rdkck48', '::1', 1561051980, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536313035313636383b7369645f7765627c733a32383a2279556679796365586e79694b466a556670706165637070666a586263223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31343a2250726173656e6a69742020446173223b757365725f656d61696c7c733a32363a22696e666f406e6574726f746563686e6f6c6f676965732e636f6d223b),
+('224ib6c11drpkbcschuuo2k2i14mmrbm', '::1', 1561397891, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536313339343330363b7369645f7765627c733a33313a22647a7955666365706464707a79616365586e79694b466a656a584a62794b64223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31343a2250726173656e6a69742020446173223b757365725f656d61696c7c733a32363a22696e666f406e6574726f746563686e6f6c6f676965732e636f6d223b),
+('06sdlafn316tu0s198098o2laahmo53n', '::1', 1561481973, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536313437353430373b7369645f7765627c733a32383a226263624a79626a586448656279654b646364617a6564484b644a6363223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31343a2250726173656e6a69742020446173223b757365725f656d61696c7c733a32363a22696e666f406e6574726f746563686e6f6c6f676965732e636f6d223b),
+('1qb8hrm93bq7pi3g3p4umjks19ra69u9', '::1', 1561744561, 0x5f5f63695f6c6173745f726567656e65726174657c693a313536313733393839363b7369645f7765627c733a33323a227979646a5865586e79694b466a654a6a584a64637a6465586e79694b466a6679223b757365725f69647c733a313a2231223b757365725f747970657c733a313a2231223b757365725f6e616d657c733a31343a2250726173656e6a69742020446173223b757365725f656d61696c7c733a32363a22696e666f406e6574726f746563686e6f6c6f676965732e636f6d223b);
 
 -- --------------------------------------------------------
 
@@ -162,7 +166,7 @@ CREATE TABLE `company_information` (
 --
 
 INSERT INTO `company_information` (`company_id`, `company_name`, `email`, `address`, `mobile`, `website`, `status`) VALUES
-('NOILG8EGCRXXBWUEUQBM', 'Janu Care', 'bdtask@gmail.com', '98,Green Road,Dhaka', 3243242, 'http://www.bdtask.com', 1);
+('NOILG8EGCRXXBWUEUQBM', 'Netro Care', 'info@netrotechnologies.com', 'Guwahati', 2147483647, 'https://netrotechnologies.com', 1);
 
 -- --------------------------------------------------------
 
@@ -184,21 +188,8 @@ CREATE TABLE `customer_information` (
 --
 
 INSERT INTO `customer_information` (`customer_id`, `customer_name`, `customer_address`, `customer_mobile`, `customer_email`, `status`) VALUES
-('93G73FMMTZ7IQ1W', 'new customer', '', '3453453', 'customer@gmail.com', 2),
-('TUW3WLOB7LM128Y', 'new customers', '', '43534534', 'customers@gmail.com', 2),
-('89LP6SZ6LLOQZSW', 'sssss', 'sad', '353543', 'ssss@gmail.com', 2),
-('MFYZNJCLTWV7IUD', 'sssssdddd', '', '345634634', 'ssss@gmail.com', 2),
-('TT8SVKPMGT84E5A', 'dsfsadfsa', '', '43534534', 'customersdfsdfsaf@gmail.com', 2),
-('LUBO5P6PVXOT31Y', 'csdfsadfhaf', '', '345345345', 'customerssdfsdaf@gmail.com', 2),
-('ITYTKKFVLBUEYON', 'OKL', 'LIB', '', '', 1),
-('C6QVMS7TJXS66MZ', 'Pikaso Makisutu', '98/A, East Lackx view,West Nkhali', '00011112121', 'maki@blaaa.com', 2),
-('MY4MUNPJMR68SYN', 'Casing Orangto', '98/A, East Lackx view,West Nkhali', '098712562747749', 'cas@muku.com', 2),
-('35SSXK8R383XXIG', 'Mike Boltu Mian', '231,East Patalipur,Sonamuri', '21119872345', 'boltu@gmail.com', 2),
-('VBP5J8J55M7IUT5', 'Modon Lal Box', 'South Ferri Ghat,Padma River,Chandpur ', '0912314567', 'box@lal.com', 2),
-('SQIU7DSJPE81QNZ', 'NORMA', 'SEMARANG AJAH', '0987654321', 'ISNAWAN@GMAIL.COM', 2),
-('6LDSHSFXM1DXEKH', 'FAIQ', 'SEMARANG JUGA', '897654345678', 'FAIQ@GMAIL.COM', 2),
-('TNU86ATUNPTQ9E7', 'xsdfcgvsdx', 'gbsdfbfds', '', '', 1),
-('HAB4KIIE89YFME9', 'Walking Customer', 'Demo', '23453245', 'demo@gmail.com', 2);
+('O61DRMHRIR9PAPI', 'Cash', 'Guwahati', '9401250708', 'cash@cash.com', 2),
+('Z9FY1843WD58AHE', 'Prasenjit Das', 'guwahati', '9401250708', 'prasn2009@gmail.com', 2);
 
 -- --------------------------------------------------------
 
@@ -224,50 +215,9 @@ CREATE TABLE `customer_ledger` (
 --
 
 INSERT INTO `customer_ledger` (`transaction_id`, `customer_id`, `invoice_no`, `receipt_no`, `amount`, `description`, `payment_type`, `cheque_no`, `date`, `status`) VALUES
-('Q975UJSQP6', '93G73FMMTZ7IQ1W', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-05 00:00:00', 1),
-('GCH7AEUFQ3', 'TUW3WLOB7LM128Y', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-05 00:00:00', 1),
-('9X7VPREDI4', 'TT8SVKPMGT84E5A', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-05 00:00:00', 1),
-('HOWL6Y3M7U', 'LUBO5P6PVXOT31Y', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-05 00:00:00', 1),
-('642529375794262', 'MFYZNJCLTWV7IUD', '3593473827', NULL, 200, '', '', '', '2017-04-05 00:00:00', 1),
-('263735161496658', '93G73FMMTZ7IQ1W', '4744113125', NULL, 200, '', '', '', '2017-04-05 00:00:00', 1),
-('594715177761782', '93G73FMMTZ7IQ1W', '7525436455', NULL, 200, '', '', '', '2017-04-05 00:00:00', 1),
-('884124542795653', '93G73FMMTZ7IQ1W', '5682226453', NULL, 200, '', '', '', '2017-04-05 00:00:00', 1),
-('444928155429746', '93G73FMMTZ7IQ1W', '8917987516', NULL, 200, '', '', '', '2017-04-05 00:00:00', 1),
-('839243781194995', '93G73FMMTZ7IQ1W', '5316967541', NULL, 200, '', '', '', '2017-04-05 00:00:00', 1),
-('6QM4WHNRVE', 'UPEIHPBKHJVV9C7', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-05 00:00:00', 1),
-('687769919624358', 'UPEIHPBKHJVV9C7', '8287358954', NULL, 200, '', '', '', '2017-04-05 00:00:00', 1),
-('987OG1V6I3VUV4Y', '93G73FMMTZ7IQ1W', NULL, 'HNVQ2SQOPF', 23423, 'sdfsd', '1', '', '2017-04-11 00:00:00', 1),
-('SOGD5NF7B9', 'C6QVMS7TJXS66MZ', 'NA', NULL, 100, 'Previous adjustment with software', 'NA', 'NA', '2017-04-11 00:00:00', 1),
-('RB2IBF9N2I', 'MY4MUNPJMR68SYN', 'NA', NULL, 500, 'Previous adjustment with software', 'NA', 'NA', '2017-04-11 00:00:00', 1),
-('L3NKYQX1HG', '35SSXK8R383XXIG', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-11 00:00:00', 1),
-('HKMYNVL455', 'VBP5J8J55M7IUT5', 'NA', NULL, 1000, 'Previous adjustment with software', 'NA', 'NA', '2017-04-11 00:00:00', 1),
-('836987889721896', '35SSXK8R383XXIG', '4691468853', NULL, 7000, '', '', '', '2017-04-11 00:00:00', 1),
-('351919555719896', '35SSXK8R383XXIG', '9925955497', NULL, 33386, '', '', '', '2017-04-11 00:00:00', 1),
-('596766256935366', 'MY4MUNPJMR68SYN', '5687162418', NULL, 21043, '', '', '', '2017-04-11 00:00:00', 1),
-('382969493324312', '93G73FMMTZ7IQ1W', '8764464745', NULL, 600, '', '', '', '2017-04-11 00:00:00', 1),
-('316564166313895', 'UPEIHPBKHJVV9C7', '2865224739', NULL, 600, '', '', '', '2017-04-11 00:00:00', 1),
-('375343795354636', 'UPEIHPBKHJVV9C7', '8393718837', NULL, 2500, '', '', '', '2017-04-11 00:00:00', 1),
-('328718387161889', 'UPEIHPBKHJVV9C7', '6382139238', NULL, 1917, '', '', '', '2017-04-17 00:00:00', 1),
-('983648913192795', 'UPEIHPBKHJVV9C7', '3436948295', NULL, 12, '', '', '', '2017-04-17 00:00:00', 1),
-('678334525426892', 'UPEIHPBKHJVV9C7', '9598355759', NULL, 810, '', '', '', '2017-04-18 00:00:00', 1),
-('373215294234131', 'UPEIHPBKHJVV9C7', '5161744482', NULL, 200, '', '', '', '2017-04-18 00:00:00', 1),
-('117484479879511', 'UPEIHPBKHJVV9C7', '8939863753', NULL, 200, '', '', '', '2017-04-18 00:00:00', 1),
-('638869235235688', 'UPEIHPBKHJVV9C7', '8133241233', NULL, 0, '', '', '', '2017-04-18 00:00:00', 1),
-('95ADC6GYFK', 'SQIU7DSJPE81QNZ', 'NA', NULL, 9000, 'Previous adjustment with software', 'NA', 'NA', '2017-04-18 00:00:00', 1),
-('5YRC2UR3DT', '6LDSHSFXM1DXEKH', 'NA', NULL, 80000, 'Previous adjustment with software', 'NA', 'NA', '2017-04-18 00:00:00', 1),
-('442564528741572', 'C6QVMS7TJXS66MZ', '6165263115', NULL, 500, '', '', '', '2017-04-18 00:00:00', 1),
-('184756828219959', 'LUBO5P6PVXOT31Y', '5588998834', NULL, 500, '', '', '', '2017-04-18 00:00:00', 1),
-('259355588723516', 'LUBO5P6PVXOT31Y', '3368754496', NULL, 305, '', '', '', '2017-04-18 00:00:00', 1),
-('994716233176883', 'LUBO5P6PVXOT31Y', '8186445426', NULL, 12, '', '', '', '2017-04-18 00:00:00', 1),
-('TVR1G8UWHL', 'ITYTKKFVLBUEYON', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-18 00:00:00', 1),
-('197364621254427', 'ITYTKKFVLBUEYON', '8537475376', NULL, 10490, '', '', '', '2017-04-18 00:00:00', 1),
-('294479552791871', '93G73FMMTZ7IQ1W', '5398294526', NULL, 400, '', '', '', '2017-04-19 00:00:00', 1),
-('ZBSLNRWA8Y', 'TNU86ATUNPTQ9E7', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-19 00:00:00', 1),
-('321583128118663', 'TNU86ATUNPTQ9E7', '3651333263', NULL, 0, '', '', '', '2017-04-19 00:00:00', 1),
-('VO578UFV2T', 'HAB4KIIE89YFME9', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2017-04-19 00:00:00', 1),
-('695525769281691', 'HAB4KIIE89YFME9', '4558415141', NULL, 1575, '', '', '', '2017-04-19 00:00:00', 1),
-('665547649157348', 'C6QVMS7TJXS66MZ', '1715493788', NULL, 1995, '', '', '', '2017-04-19 00:00:00', 1),
-('843359736785595', '35SSXK8R383XXIG', '4121841666', NULL, 374, '', '', '', '2017-04-19 00:00:00', 1);
+('B2S9JMT4G5', 'O61DRMHRIR9PAPI', 'NA', NULL, 0, 'Previous adjustment with software', 'NA', 'NA', '2019-06-24 00:00:00', 1),
+('715365253538857', 'O61DRMHRIR9PAPI', '4753455567', NULL, 9000, '', '', '', '2019-06-24 00:00:00', 1),
+('67S1AJX9FI', 'Z9FY1843WD58AHE', 'NA', NULL, 1000, 'Previous adjustment with software', 'NA', 'NA', '2019-06-25 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -316,14 +266,6 @@ CREATE TABLE `daily_closing` (
   `status` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `daily_closing`
---
-
-INSERT INTO `daily_closing` (`closing_id`, `last_day_closing`, `cash_in`, `cash_out`, `date`, `amount`, `adjustment`, `status`) VALUES
-('WFx00H9vP7SpZ0N', 0, 43543534, 7878778, '2017-03-30 12:48:37', 35664756, 0, 1),
-('D5shdsn8wYb8Hct', 35664756, 0, 0, '2017-04-18 10:49:42', 35664756, 2, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -355,31 +297,6 @@ CREATE TABLE `invoice` (
   `status` int(2) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `invoice`
---
-
-INSERT INTO `invoice` (`invoice_id`, `customer_id`, `date`, `total_amount`, `invoice`, `status`) VALUES
-('3887411773', '9UCBIDFDWLRTLEE', '2017-04-05 00:00:00', 200, '1000', 1),
-('8764464745', '93G73FMMTZ7IQ1W', '2017-04-11 00:00:00', 600, '1001', 1),
-('2865224739', 'UPEIHPBKHJVV9C7', '2017-04-11 00:00:00', 600, '1002', 1),
-('8393718837', 'UPEIHPBKHJVV9C7', '2017-04-11 00:00:00', 2500, '1003', 1),
-('6382139238', 'UPEIHPBKHJVV9C7', '2017-04-17 00:00:00', 1917, '1004', 1),
-('3436948295', 'UPEIHPBKHJVV9C7', '2017-04-17 00:00:00', 12, '1005', 1),
-('9598355759', 'UPEIHPBKHJVV9C7', '2017-04-18 00:00:00', 810, '1006', 1),
-('5161744482', 'UPEIHPBKHJVV9C7', '2017-04-18 00:00:00', 200, '1007', 1),
-('8939863753', 'UPEIHPBKHJVV9C7', '2017-04-18 00:00:00', 200, '1008', 1),
-('8133241233', 'UPEIHPBKHJVV9C7', '2017-04-18 00:00:00', 0, '1009', 1),
-('6165263115', 'C6QVMS7TJXS66MZ', '2017-04-18 00:00:00', 500, '1010', 1),
-('5588998834', 'LUBO5P6PVXOT31Y', '2017-04-18 00:00:00', 500, '1011', 1),
-('3368754496', 'LUBO5P6PVXOT31Y', '2017-04-18 00:00:00', 305, '1012', 1),
-('8186445426', 'LUBO5P6PVXOT31Y', '2017-04-18 00:00:00', 12, '1013', 1),
-('8537475376', 'ITYTKKFVLBUEYON', '2017-04-18 00:00:00', 10490, '1014', 1),
-('5398294526', '93G73FMMTZ7IQ1W', '2017-04-19 00:00:00', 400, '1015', 1),
-('1715493788', 'C6QVMS7TJXS66MZ', '2017-04-19 00:00:00', 1995, '1018', 1),
-('4558415141', 'HAB4KIIE89YFME9', '2017-04-19 00:00:00', 1575, '1017', 1),
-('4121841666', '35SSXK8R383XXIG', '2017-04-19 00:00:00', 374, '1019', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -407,21 +324,7 @@ CREATE TABLE `invoice_details` (
 --
 
 INSERT INTO `invoice_details` (`invoice_details_id`, `invoice_id`, `product_id`, `cartoon`, `quantity`, `rate`, `supplier_rate`, `total_price`, `discount`, `tax`, `paid_amount`, `due_amount`, `status`) VALUES
-('922525247675172', '3887411773', '83873176', NULL, 1, 200, 150, 200, 0, 0, 0, 200, 1),
-('151236993448712', '8764464745', '74879464', NULL, 3, 200, 150, 600, 0, 0, 0, 600, 1),
-('122598784296679', '2865224739', '74879464', NULL, 4, 200, 150, 600, 200, 0, 600, 0, 1),
-('335387126486269', '8393718837', '21887371', NULL, 5, 500, 300, 2500, 0, 0, 0, 2500, 1),
-('434426759343263', '3436948295', '39161423', NULL, 1, 12, 10, 12, 0, 0, 0, 12, 1),
-('133865461435773', '5161744482', '74879464', NULL, 1, 200, 150, 200, 0, 0, 0, 200, 1),
-('674392294171445', '8939863753', '74879464', NULL, 3, 200, 150, 200, 0, 0, 1000, -800, 1),
-('858169776282583', '6165263115', '21887371', NULL, 6, 500, 300, 500, 0, 0, 0, 500, 1),
-('639243682572464', '5588998834', '21887371', NULL, 1, 500, 300, 500, 0, 0, 0, 500, 1),
-('691584382826468', '8186445426', '39161423', NULL, 1, 12, 10, 12, 0, 0, 0, 12, 1),
-('478112777586158', '8537475376', '21887371', NULL, 21, 500, 300, 10490, 10, 0, 0, 10490, 1),
-('662929458377638', '5398294526', '74879464', NULL, 2, 200, 150, 400, 0, 0, 0, 400, 1),
-('148937473224627', '4558415141', '47323949', NULL, 3, 500, 100, 1500, 0, 75, 0, 1575, 1),
-('356652723262439', '1715493788', '74879464', NULL, 10, 200, 150, 1995, 5, 0, 0, 1995, 1),
-('288927439413478', '4121841666', '63666625', NULL, 4, 89, 80, 356, 0, 18, 374, 0, 1);
+('118791284569427', '4753455567', '88469913', NULL, 10, 900, 890, 9000, 0, 0, 9000, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -842,7 +745,8 @@ INSERT INTO `language` (`id`, `phrase`, `english`, `bangla`, `uzbek`, `franais`,
 (397, 'table_edit', 'Table Edit', NULL, '', '', ''),
 (0, 'captcha', 'Captcha', NULL, NULL, NULL, NULL),
 (0, 'site_key', 'Site Key', NULL, NULL, NULL, NULL),
-(0, 'secret_key', 'Secret Key', NULL, NULL, NULL, NULL);
+(0, 'secret_key', 'Secret Key', NULL, NULL, NULL, NULL),
+(0, 'hsn_code', 'HSN CODE', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -919,11 +823,13 @@ INSERT INTO `product_category` (`id`, `category_id`, `category_name`, `status`) 
 --
 
 CREATE TABLE `product_information` (
+  `p_id` int(11) NOT NULL,
   `product_id` varchar(100) NOT NULL,
   `supplier_id` varchar(255) NOT NULL,
   `category_id` varchar(255) DEFAULT NULL,
   `product_name` varchar(255) NOT NULL,
   `generic_name` varchar(100) DEFAULT NULL,
+  `hsn_code` varchar(255) NOT NULL,
   `box_size` varchar(100) DEFAULT NULL,
   `expire_date` varchar(100) DEFAULT NULL,
   `product_location` varchar(100) DEFAULT NULL,
@@ -940,20 +846,9 @@ CREATE TABLE `product_information` (
 -- Dumping data for table `product_information`
 --
 
-INSERT INTO `product_information` (`product_id`, `supplier_id`, `category_id`, `product_name`, `generic_name`, `box_size`, `expire_date`, `product_location`, `price`, `supplier_price`, `tax`, `product_model`, `product_details`, `image`, `status`) VALUES
-('74879464', 'VJDKS1FHXRGHTF3UYLU5', '31XYLWEF6GQOUS5', 'Magnesium citrate solution', 'magnesium citrate', '100', '2018-08-17', '12', 200, 150, 0, 'shirt-1', 'Clearing the bowels before tests or for treating constipation.\r\n\r\nMagnesium citrate solution is a laxative. It works by attracting and retaining water in the intestine, which allows the bowel to evacuate.', 'http://pharmacy.bdtask.com/my-assets/image/product/1fca00885da90a2dae03dbc5e1674f58.jpg', 1),
-('21887371', 'YKGUA4VKM2O49G7EWMWW', 'WHIBHKKV917FRTK', 'Alinia', ' nitazoxanide', '300', '2019-05-10', '2', 500, 300, 0, 'p1234', 'Amebicides are agents that destroy or kill amebae. The different amebecides have different modes of action. They are used to eradicate the parasitic species of amebae in animals or humans.\r\n\r\n', 'http://pharmacy.bdtask.com/my-assets/image/product/c0f7e48144c7227f2d13ee0a7c78aad6.jpg', 1),
-('78855364', 'YKGUA4VKM2O49G7EWMWW', 'J92YBRWR546SEQH', 'Grastek', 'timothy grass pollen allergen extract', '120', '2018-08-03', '4', 300, 280, 5, 'A009121', 'Allergenics are used for allergen immunotherapy to decrease the immune response to allergens . The allergenic is administered to the patient as an injection or sublingually in increasing doses with the treatment plan taking three to five years.', 'http://pharmacy.bdtask.com/my-assets/image/product/fdf4ddbb2b3371dbe38d5e3b3157bba6.jpg', 1),
-('89667471', 'BE9ZYPUN979Z3DBN2RJT', 'WHIBHKKV917FRTK', 'Lamprene', 'clofazimine', '500', '2018-03-01', '11', 270, 260, 0, 'M009', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 'http://pharmacy.bdtask.com/my-assets/image/product/fdcb5b6f56e564556664c0f77e6ec7e4.JPG', 1),
-('43531368', 'YS6APPSSL3OZOFK8YOZ2', 'YJI3PWF9UXS7IGD', 'Ozurdex', ' dexamethasone intravitreal implant ', '300', '2019-05-10', '2', 1000, 8900, 5, 'H002', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 'http://pharmacy.bdtask.com/my-assets/image/product/f1dbe46e2a71fef23373fc9b2eb7eca0.gif', 1),
-('19228217', 'YS6APPSSL3OZOFK8YOZ2', 'DBB9RFJI9XWI7KD', 'Theo-24', 'theophylline', '260', '2019-05-10', '7', 1200, 1150, 0, 'H0012', 'Maecenas congue nunc vitae erat blandit rutrum. Nulla quis est vitae tellus tincidunt fermentum ac eu odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur id turpis a erat vestibulum laoreet. Nam so', 'http://pharmacy.bdtask.com/my-assets/image/product/f74f166b99d6763541fdc2ff30a86387.jpg', 1),
-('58798434', 'YS6APPSSL3OZOFK8YOZ2', '7PWNR3JA2C4I6XR', 'Solotuss', 'carbetapentane ', '300', '2018-08-03', '3', 900, 890, 0, 'SS12341', 'Maecenas congue nunc vitae erat blandit rutrum. Nulla quis est vitae tellus tincidunt fermentum ac eu odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur id turpis a erat vestibulum laoreet. Nam so', 'http://pharmacy.bdtask.com/my-assets/image/product/763f65245786f30b464b991e7e915769.jpg', 1),
-('39161423', 'YS6APPSSL3OZOFK8YOZ2', 'NVUOTK9153ERZQA', 'Acid Gone', 'aluminum hydroxide/magnesium carbonate', '100', '2019-03-22', '6', 12, 10, 0, 'TNsB4543', 'Antacids are a class of medicines that neutralize acid in the stomach. They contain ingredients such as aluminum, calcium, or magnesium which act as bases (alkalis) to counteract the stomach acid and lower pH. They work quickly and are used to relieve sym', 'http://pharmacy.bdtask.com/my-assets/image/product/8787481a76ac40034c6ea364ef79bb7d.jpg', 1),
-('56468618', 'YS6APPSSL3OZOFK8YOZ2', 'NIBPE5DPVVCVEEN', 'Rhinocort', 'budesonide', '435', '2017-04-29', '5', 10, 4, 0, 'SNt45NSM345435', 'Nasal steroids (also called nasal corticosteroids) are medicines containing corticosteroids such as beclomethasone, budesonide, fluticasone, or triamcinolone in a preparation designed for nasal use.\r\n\r\nCorticosteroids are very effective at reducing inflam', 'http://pharmacy.bdtask.com/my-assets/image/product/fa22f359faeb6732eecd7f432312afc5.jpg', 1),
-('45611874', 'YS6APPSSL3OZOFK8YOZ2', '', '', '', '', '', '', 2, 5, 0, '5', '', NULL, 1),
-('53782949', 'YS6APPSSL3OZOFK8YOZ2', '', 'asdsad', 'dsad', '2', '2017-04-17', '', 3, 21, 0.15, '12', '', NULL, 1),
-('47323949', 'YS6APPSSL3OZOFK8YOZ2', '', 'Napa', 'Nama', '23', '2017-04-19', 'self', 500, 100, 25, '123mnsd3', 'demo details', NULL, 1),
-('63666625', 'YKGUA4VKM2O49G7EWMWW', 'NIBPE5DPVVCVEEN', 'Sibellium 10 mg', 'Sibellium 10 mg', '0', '2017-10-12', 'rack1', 89, 80, 4.45, '1234', 'Use for neuropathic', NULL, 1);
+INSERT INTO `product_information` (`p_id`, `product_id`, `supplier_id`, `category_id`, `product_name`, `generic_name`, `hsn_code`, `box_size`, `expire_date`, `product_location`, `price`, `supplier_price`, `tax`, `product_model`, `product_details`, `image`, `status`) VALUES
+(1, '94176695', 'ELVAJZI8G3T2FBEB3ZFN', '7PWNR3JA2C4I6XR', 'Solotuss', 'carbetapentane ', '', '300', '2018-08-03', '3', 900, 890, 5, 'SS12341', 'Medicine Description', 'http://localhost/medishop/my-assets/image/product/6ac222758ca5a8c67e01dc44a2f1e2c9.jpg', 1),
+(2, '51175915', 'ELVAJZI8G3T2FBEB3ZFN', 'DBB9RFJI9XWI7KD', 'New Medicine', 'New Medicine', 'SSDSE', '25', '2019-06-18', 's', 300, 200, 18, 'eee4ee', 'sdsad', '', 1);
 
 -- --------------------------------------------------------
 
@@ -976,19 +871,7 @@ CREATE TABLE `product_purchase` (
 --
 
 INSERT INTO `product_purchase` (`purchase_id`, `chalan_no`, `supplier_id`, `grand_total_amount`, `purchase_date`, `purchase_details`, `status`) VALUES
-('20170329132429', '123454576', 'VJDKS1FHXRGHTF3UYLU5', 7500, '2017-03-29 00:00:00', '', 1),
-('20170330091606', '3453454', 'YKGUA4VKM2O49G7EWMWW', 20000, '2017-03-30 00:00:00', '', 1),
-('20170330100711', '3475', 'YKGUA4VKM2O49G7EWMWW', 180000, '2017-03-30 00:00:00', 'lorem', 1),
-('20170405134533', '5632463246326', 'VJDKS1FHXRGHTF3UYLU5', 300, '2017-04-05 00:00:00', '', 1),
-('20170405134545', '626265', 'VJDKS1FHXRGHTF3UYLU5', 3450, '2017-04-05 00:00:00', '', 1),
-('20170405134555', '45345435', 'VJDKS1FHXRGHTF3UYLU5', 8100, '2017-04-05 00:00:00', '', 1),
-('20170411080028', '10099', 'YS6APPSSL3OZOFK8YOZ2', 934700, '2017-04-11 00:00:00', '', 1),
-('20170411100559', '5677', 'YS6APPSSL3OZOFK8YOZ2', 5340000, '2017-04-11 00:00:00', '', 1),
-('20170411104625', '123', 'VJDKS1FHXRGHTF3UYLU5', 15000, '2017-04-11 00:00:00', 'cxzv', 1),
-('20170411104808', '1234', 'YKGUA4VKM2O49G7EWMWW', 30000, '2017-04-11 00:00:00', '', 1),
-('20170417175437', '1122', 'YKGUA4VKM2O49G7EWMWW', 0, '2017-04-17 00:00:00', '', 1),
-('20170419040128', '345343', 'YS6APPSSL3OZOFK8YOZ2', 210000, '2017-04-19 00:00:00', 'Demo', 1),
-('20170419075224', '2222', 'YKGUA4VKM2O49G7EWMWW', 960, '2017-04-19 00:00:00', '', 1);
+('20190624193333', '2525', 'ELVAJZI8G3T2FBEB3ZFN', 2000, '2019-06-24 00:00:00', '', 1);
 
 -- --------------------------------------------------------
 
@@ -1011,21 +894,7 @@ CREATE TABLE `product_purchase_details` (
 --
 
 INSERT INTO `product_purchase_details` (`purchase_detail_id`, `purchase_id`, `product_id`, `quantity`, `rate`, `total_amount`, `status`) VALUES
-('Wak4Qw3Yd7VPmLL', '20170329132429', '83873176', 50, 150, 7500, 1),
-('D5Kn0W9QIZkJ4ps', '20170330091606', '88414862', 100, 200, 20000, 1),
-('X4BVsyFDsW3JAni', '20170330100711', '91363948', 400, 450, 180000, 1),
-('HRhQI9R15DXOCPL', '20170405134533', '83873176', 2, 150, 300, 1),
-('5mvhzMUxc8Jwwa8', '20170405134545', '83873176', 23, 150, 3450, 1),
-('2Pr831Y4JCl8hw4', '20170405134555', '83873176', 54, 150, 8100, 1),
-('gOfS61v0RyygEQB', '20170411080028', '43531368', 100, 8900, 890000, 1),
-('Ur5G6fs9i3aAmA1', '20170411080028', '58798434', 50, 890, 44500, 1),
-('AhFfzAWk0nZyKeE', '20170411080028', '39161423', 20, 10, 200, 1),
-('oQcbNWIXHuH5mfY', '20170411100559', '43531368', 600, 8900, 5340000, 1),
-('JxmXuc4qILYAWhr', '20170411104625', '74879464', 100, 150, 15000, 1),
-('rkEPXbbnCTileW', '20170411104808', '21887371', 100, 300, 30000, 1),
-('TmkCoV8TOIYIe3W', '20170417175437', '21887371', 1, 300, 300, 1),
-('WEbCG9nLhxOH7N9', '20170419040128', '47323949', 2100, 100, 210000, 1),
-('iWSvqOWyLYaoSo2', '20170419075224', '63666625', 12, 80, 960, 1);
+('MKkqoVKqbB2wc87', '20190624193333', '88469913', 20, 100, 2000, 1);
 
 -- --------------------------------------------------------
 
@@ -1141,15 +1010,7 @@ CREATE TABLE `supplier_information` (
 --
 
 INSERT INTO `supplier_information` (`supplier_id`, `supplier_name`, `address`, `mobile`, `details`, `status`) VALUES
-('VJDKS1FHXRGHTF3UYLU5', 'New Supplier', '', '023424234', '', 1),
-('YKGUA4VKM2O49G7EWMWW', 'Abdullah', '', '0234234234', '', 1),
-('94KITM73FB6GBUDK22RJ', 'Tanzil Ahmad', '98 Green Road, Farmgate, Dhaka-1215', '01922296392', 'This is demo data.will update later', 1),
-('YS6APPSSL3OZOFK8YOZ2', 'Maxiz Sanuka', 'South Ferri Ghat,Padma River,Chandpur', '0181111111111', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 1),
-('1CFWC2V5US1EVAWJBA84', 'Murat Zadran', '98/A, East Lackx view,West Nkhali', '098712562747749', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 1),
-('B7K8QO4U81FGJ3X9MSD9', 'Tawhid Khan', '98/A, East Lackx view,West Nkhali', '098712562747749', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 1),
-('LA55786NFX8PCUFZ46EG', 'Sowkot Choudhury ', 'South Ferri Ghat,Padma River,Chandpur', '0181111111111', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 1),
-('SHJ18FWDK4W7H8RAEECG', 'Xinan Huyanhu', '98/A, East Lackx view,West Nkhali', '0181111111111', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 1),
-('BE9ZYPUN979Z3DBN2RJT', 'Alex Hard Nicoli', '231,East Patalipur,Sonamuri', '0181111111111', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae volutpat magna, at volutpat elit. Sed at sodales enim. Sed pharetra consectetur orci in vehicula. Vestibulum nunc orci, ultrices ut mattis vel, hendrerit sed ante. Aliquam venenatis to', 1);
+('ELVAJZI8G3T2FBEB3ZFN', 'Hiranya Sharma', 'Guwahati', '9401250708', 'New Supplier', 1);
 
 -- --------------------------------------------------------
 
@@ -1192,7 +1053,8 @@ INSERT INTO `supplier_ledger` (`transaction_id`, `supplier_id`, `chalan_no`, `de
 ('20170417175437', 'YKGUA4VKM2O49G7EWMWW', '1122', NULL, 0, '', '', '', '2017-04-17 00:00:00', 1),
 ('20170419040128', 'YS6APPSSL3OZOFK8YOZ2', '345343', NULL, 210000, 'Demo', '', '', '2017-04-19 00:00:00', 1),
 ('20170419075224', 'YKGUA4VKM2O49G7EWMWW', '2222', NULL, 960, '', '', '', '2017-04-19 00:00:00', 1),
-('8A01WqQ5CZL4RTr', 'YS6APPSSL3OZOFK8YOZ2', NULL, 'iSIJU7gogk', 123, 'Demo', '1', '', '2017-04-19 00:00:00', 1);
+('8A01WqQ5CZL4RTr', 'YS6APPSSL3OZOFK8YOZ2', NULL, 'iSIJU7gogk', 123, 'Demo', '1', '', '2017-04-19 00:00:00', 1),
+('20190624193333', 'ELVAJZI8G3T2FBEB3ZFN', '2525', NULL, 2000, '', '', '', '2019-06-24 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -1213,9 +1075,8 @@ CREATE TABLE `tax_information` (
 INSERT INTO `tax_information` (`tax_id`, `tax`, `status`) VALUES
 (1, 0, NULL),
 (2, 5, NULL),
-(3, 10, NULL),
-(4, 15, NULL),
-(5, 20, NULL);
+(3, 18, NULL),
+(4, 28, NULL);
 
 -- --------------------------------------------------------
 
@@ -1237,9 +1098,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `last_name`, `first_name`, `gender`, `date_of_birth`, `status`) VALUES
-(1, 'Akhmatovich', 'Alisher', 1, '', 1),
-(11, 'Doe', 'John', 0, '', 0),
-(12, 'Ahmed', 'Tanzil', 0, '', 1);
+(1, 'Das', 'Prasenjit ', 1, '', 1);
 
 -- --------------------------------------------------------
 
@@ -1263,6 +1122,7 @@ CREATE TABLE `user_info` (
 --
 
 CREATE TABLE `user_login` (
+  `u_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -1275,10 +1135,8 @@ CREATE TABLE `user_login` (
 -- Dumping data for table `user_login`
 --
 
-INSERT INTO `user_login` (`user_id`, `username`, `password`, `user_type`, `security_code`, `status`) VALUES
-(1, 'test@test.com', '41d99b369894eb1ec3f461135132d8bb', 1, '', 1),
-(11, 'jone.doe@gmail.com', '41d99b369894eb1ec3f461135132d8bb', 2, '', 1),
-(12, 'tanzil4091@gmail.com', '41d99b369894eb1ec3f461135132d8bb', 2, '', 1);
+INSERT INTO `user_login` (`u_id`, `user_id`, `username`, `password`, `user_type`, `security_code`, `status`) VALUES
+(1, 1, 'info@netrotechnologies.com', '41d99b369894eb1ec3f461135132d8bb', 1, '', 1);
 
 -- --------------------------------------------------------
 
@@ -1306,7 +1164,7 @@ CREATE TABLE `web_setting` (
 --
 
 INSERT INTO `web_setting` (`setting_id`, `logo`, `invoice_logo`, `favicon`, `currency`, `currency_position`, `footer_text`, `language`, `rtr`, `captcha`, `site_key`, `secret_key`) VALUES
-(1, 'http://pharmacy.bdtask.com/my-assets/image/logo/a269808b88a75c3cbc6e91f63b49cb38.png', 'http://pharmacy.bdtask.com/my-assets/image/logo/6c0a5bafa93b3472daa9c4fb633dd5a1.png', 'http://pharmacy.bdtask.com/my-assets/image/logo/5384d4c29117bdd6004c1f82b9ae0535.png', '₹', '0', 'Copyright © 2011-2017 ATA Group. All rights reserved.', 'english', '0', 1, '6LdiKhsUAAAAAMV4jQRmNYdZy2kXEuFe1HrdP5tt', '6LdiKhsUAAAAABH4BQCIvBar7Oqe-2LwDKxMSX-t');
+(1, 'http://localhost/medishop/my-assets/image/logo/1a6d2187570659bb6e4d4cc75d90becb.png', 'http://localhost/medishop/my-assets/image/logo/f46bf75869e072c748f01655e2453dc2.png', 'http://localhost/medishop/my-assets/image/logo/d7c94a6bb681631bcf825f3edfc435e1.png', '₹', '0', 'Copyright © Netro Technologies PVT LTD. All rights reserved.', 'english', '0', 1, '6LdiKhsUAAAAAMV4jQRmNYdZy2kXEuFe1HrdP5tt', '6LdiKhsUAAAAABH4BQCIvBar7Oqe-2LwDKxMSX-t');
 
 -- --------------------------------------------------------
 
@@ -1370,6 +1228,38 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `stock_history`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `stock_history`  AS  select `invoice`.`date` AS `vdate`,`invoice_details`.`product_id` AS `product_id`,sum(`invoice_details`.`quantity`) AS `sell`,0 AS `Purchase` from (`invoice_details` join `invoice` on((`invoice_details`.`invoice_id` = `invoice`.`invoice_id`))) group by `invoice_details`.`product_id`,`invoice`.`date` union select `product_purchase`.`purchase_date` AS `purchase_date`,`product_purchase_details`.`product_id` AS `product_id`,0 AS `0`,sum(`product_purchase_details`.`quantity`) AS `purchase` from (`product_purchase_details` join `product_purchase` on((`product_purchase_details`.`purchase_id` = `product_purchase`.`purchase_id`))) group by `product_purchase_details`.`product_id`,`product_purchase`.`purchase_date` ;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `product_information`
+--
+ALTER TABLE `product_information`
+  ADD PRIMARY KEY (`p_id`);
+
+--
+-- Indexes for table `user_login`
+--
+ALTER TABLE `user_login`
+  ADD PRIMARY KEY (`u_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `product_information`
+--
+ALTER TABLE `product_information`
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `user_login`
+--
+ALTER TABLE `user_login`
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
