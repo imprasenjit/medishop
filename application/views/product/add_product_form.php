@@ -69,6 +69,12 @@
                                          <input class="form-control" name="generic_name" type="text" id="generic_name" placeholder="<?php echo display('generic_name') ?>">
                                     </div>
                                 </div> 
+                                <div class="form-group row">
+                                    <label for="manufacturer " class="col-sm-4 col-form-label"><?php echo display('manufacturer') ?> </label>
+                                    <div class="col-sm-8">
+                                         <input class="form-control" name="manufacturer" type="text" id="manufacturer " placeholder="<?php echo display('manufacturer') ?>">
+                                    </div>
+                                </div> 
                             </div>
                         </div>
 
@@ -152,6 +158,7 @@
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
+                                        <th class="text-center"><?php echo display('mrp') ?> <i class="text-danger">*</i></th>
                                         <th class="text-center"><?php echo display('sell_price') ?> <i class="text-danger">*</i></th>
                                         <th class="text-center"><?php echo display('supplier_price') ?> <i class="text-danger">*</i></th>
                                         <th class="text-center"><?php echo display('model') ?> <i class="text-danger">*</i></th>
@@ -161,6 +168,9 @@
                                 </thead>
                                 <tbody id="form-actions">
                                     <tr class="">
+                                        <td class="">
+                                            <input class="form-control text-right" name="mrp_price" type="number" required="" placeholder="<?php echo display('mrp') ?>" tabindex="3">
+                                        </td>
                                         <td class="">
                                             <input class="form-control text-right" name="price" type="number" required="" placeholder="<?php echo display('sell_price') ?>" tabindex="3">
                                         </td>

@@ -28,7 +28,6 @@ class Invoices extends CI_Model {
 		}
 		return false;
 	}
-
 	//invoice Search Item
 	public function search_inovoice_item($customer_id)
 	{
@@ -42,7 +41,6 @@ class Invoices extends CI_Model {
 		}
 		return false;
 	}
-
 	//POS invoice entry
 	public function pos_invoice_setup($product_model){
 		$product_information = $this->db->select('*')
@@ -50,20 +48,15 @@ class Invoices extends CI_Model {
 						->where('product_model',$product_model)
 						->get()
 						->row();
-						
 		if (isset($product_information->product_id)) {
-
 			$this->db->select('SUM(a.quantity) as total_purchase');
 			$this->db->from('product_purchase_details a');
 			$this->db->where('a.product_id',$product_information->product_id);
 			$total_purchase = $this->db->get()->row();
-
 			$this->db->select('SUM(b.quantity) as total_sale');
 			$this->db->from('invoice_details b');
 			$this->db->where('b.product_id',$product_information->product_id);
 			$total_sale = $this->db->get()->row();
-
-			
 			$data2 = (object)array(
 				'total_product' => ($total_purchase->total_purchase - $total_sale->total_sale), 
 				'supplier_price' => $product_information->supplier_price, 
@@ -73,7 +66,6 @@ class Invoices extends CI_Model {
 				'product_id' => $product_information->product_id, 
 				'product_name' => $product_information->product_name, 
 				);
-
 			return $data2;
 		}else{
 			return false;
@@ -87,29 +79,23 @@ class Invoices extends CI_Model {
 						->get()
 						->row();
 	}
-
 	//Count invoice
 	public function invoice_entry()
 	{
 		$invoice_id = $this->generator(10);
 		$invoice_id = strtoupper($invoice_id);
-		
 		$product_id = $this->input->post('product_id');
 		if ($product_id == null) {
 			$this->session->set_userdata(array('error_message'=>display('please_select_product')));
 			redirect('Cinvoice/pos_invoice');
 		}
-
 		if (($this->input->post('customer_name_others') == null) && ($this->input->post('customer_id') == null )) {
 			$this->session->set_userdata(array('error_message'=>display('please_select_customer')));
 			redirect(base_url().'Cinvoice');
 		}
-
-		
 		//Customer data Existence Check.
 		$paid_amount=$this->input->post('paid_amount');
 		if(($this->input->post('customer_name_others') != null) && ($paid_amount == null )){
-
 			$customer_id=$this->auth->generator(15);
 		  	//Customer  basic information adding.
 			$data=array(
@@ -120,7 +106,6 @@ class Invoices extends CI_Model {
 				'customer_email' 		=> "",
 				'status' 				=> 2
 				);
-		
 			$this->Customers->customer_entry($data);
 		  	//Previous balance adding -> Sending to customer model to adjust the data.
 			$this->Customers->previous_balance_add(0,$customer_id);
@@ -128,10 +113,8 @@ class Invoices extends CI_Model {
 		else{
 			$customer_id=$this->input->post('customer_id');
 		}
-
 		//Paid ammount 
 		if(($this->input->post('customer_name_others') != null) && ($paid_amount != null )){
-
 			$customer_id=$this->auth->generator(15);
 		  	//Customer  basic information adding.
 			$data=array(
@@ -142,11 +125,9 @@ class Invoices extends CI_Model {
 				'customer_email' 		=> "",
 				'status' 				=> 1
 				);
-		
 			$this->Customers->customer_entry($data);
 		  	//Previous balance adding -> Sending to customer model to adjust the data.
 			$this->Customers->previous_balance_add(0,$customer_id);
-
 			//Full or partial Payment record.
 			if($this->input->post('paid_amount') > 0)
 			{
@@ -157,13 +138,12 @@ class Invoices extends CI_Model {
 					'receipt_no'		=>	$this->auth->generator(10),
 					'date'				=>	$this->input->post('invoice_date'),
 					'amount'			=>	$this->input->post('paid_amount'),
+					'due_amount'        =>	$this->input->post('due_amount'),
 					'payment_type'		=>	1,
 					'description'		=>	'ITP',
 					'status'			=>	1
 				);
 				$this->db->insert('customer_ledger',$data2);
-
-
 				// Inserting for Accounts adjustment.
 				############ default table :: customer_payment :: inflow_92mizdldrv #################
 				//Insert to customer_ledger Table 
@@ -180,7 +160,6 @@ class Invoices extends CI_Model {
 				$this->db->insert($account_table,$account_adjustment);
 			}
 		}
-
 		//Data inserting into invoice table
 		$data=array(
 			'invoice_id'		=>	$invoice_id,
@@ -191,8 +170,6 @@ class Invoices extends CI_Model {
 			'status'			=>	1
 		);
 		$this->db->insert('invoice',$data);
-		
-		
 		//Insert to customer_ledger Table 
 		$data2 = array(
 			'transaction_id'	=>	$this->generator(15),
@@ -203,12 +180,11 @@ class Invoices extends CI_Model {
 			'status'			=>	1
 		);
 		$this->db->insert('customer_ledger',$data2);
-
 		//Insert payment method
-		$payment_method = $this->input->post('payment_method');
-		$card_no = $this->input->post('card_no');
-		$bank_name = $this->input->post('bank_name');
-		if ($card_no != null) {
+		//$payment_method = $this->input->post('payment_method');
+		//$card_no = $this->input->post('card_no');
+		//$bank_name = $this->input->post('bank_name');
+/* 		if ($card_no != null) {
 			$data3 = array(
 			'payment_type'	=>	$payment_method,
 			'card_no'			=>	$card_no,
@@ -216,17 +192,13 @@ class Invoices extends CI_Model {
 			'price'				=>	$this->input->post('grand_total_price'),
 			);
 			$this->db->insert('payment_method',$data3);
-		}
-
-		
+		} */
 		$rate = $this->input->post('product_rate');
 		$p_id = $this->input->post('product_id');
 		$total_amount = $this->input->post('total_price');
 		$discount = $this->input->post('discount');
-
 		$available_quantity = $this->input->post('available_quantity');
 		$quantity = $this->input->post('product_quantity');
-
 		$result = array();
 		foreach($quantity as $k => $v)
 		{
@@ -236,7 +208,6 @@ class Invoices extends CI_Model {
 		       redirect('Cinvoice');
 		    }
 		}
-
 		for ($i=0, $n=count($quantity); $i < $n; $i++) {
 			$product_quantity = $quantity[$i];
 			$product_rate = $rate[$i];
@@ -244,7 +215,6 @@ class Invoices extends CI_Model {
 			$discount_rate = $discount[$i];
 			$total_price = $total_amount[$i];
 			$supplier_rate=$this->supplier_rate($product_id);
-			
 			$data1 = array(
 				'invoice_details_id'	=>	$this->generator(15),
 				'invoice_id'			=>	$invoice_id,
@@ -253,17 +223,13 @@ class Invoices extends CI_Model {
 				'rate'					=>	$product_rate,
 				'discount'           	=>	$discount_rate,
 				'tax'           		=>	$this->input->post('total_tax'),
-				'paid_amount'           		=>	$this->input->post('paid_amount'),
-				'due_amount'           	=>	$this->input->post('due_amount'),
 				'supplier_rate'         =>	$supplier_rate[0]['supplier_price'],
 				'total_price'           =>	$total_price,
 				'status'				=>	1
 			);
-			
 			if(!empty($quantity))
 			{
 				$this->db->insert('invoice_details',$data1);
-
 			}
 		}
 		return $invoice_id;
@@ -276,7 +242,6 @@ class Invoices extends CI_Model {
 		$this->db->where(array('product_id' => $product_id)); 
 		$query = $this->db->get();
 		return $query->result_array();
-	
 	}
 	//Retrieve invoice Edit Data
 	public function retrieve_invoice_editdata($invoice_id)
@@ -288,7 +253,6 @@ class Invoices extends CI_Model {
 		$this->db->join('product_information d','d.product_id = c.product_id');
 		$this->db->where('a.invoice_id',$invoice_id);
 		$query = $this->db->get();
-
 		if ($query->num_rows() > 0) {
 			return $query->result_array();	
 		}
@@ -298,7 +262,6 @@ class Invoices extends CI_Model {
 	public function update_invoice()
 	{
 		$invoice_id = $this->input->post('invoice_id');
-
 		$data=array(
 			'customer_id'		=>	$this->input->post('customer_id'),
 			'date'				=>	$this->input->post('invoice_date'),
@@ -310,17 +273,14 @@ class Invoices extends CI_Model {
 			'date'				=>	$this->input->post('invoice_date'),
 			'amount'			=>	$this->input->post('grand_total_price')
 		);
-		
 		if($invoice_id!='')
 		{
 			$this->db->where('invoice_id',$invoice_id);
 			$this->db->update('invoice',$data); 
-			
 			//Update Another table
 			$this->db->where('invoice_no',$invoice_id);
 			$this->db->update('customer_ledger',$data2); 
 		}
-
 		$invoice_d_id = $this->input->post('invoice_details_id');
 		$rate = $this->input->post('product_rate');
 		$p_id = $this->input->post('product_id');
@@ -328,7 +288,6 @@ class Invoices extends CI_Model {
 		$quantity = $this->input->post('product_quantity');
 		$total_amount = $this->input->post('total_price');
 		$discount_rate = $this->input->post('discount');
-		
 		for ($i=0, $n=count($invoice_d_id); $i < $n; $i++) {
 			$product_quantity = $quantity[$i];
 			$product_rate = $rate[$i];
@@ -336,7 +295,6 @@ class Invoices extends CI_Model {
 			$invoice_detail_id = $invoice_d_id[$i];
 			$total_price = $total_amount[$i];
 			$discount = $discount_rate[$i];
-			
 			$data1 = array(
 				'invoice_id'		=>	$invoice_id,
 				'product_id'		=>	$product_id,
@@ -447,24 +405,20 @@ class Invoices extends CI_Model {
 		}
 		return false;
 	}
-
 	//Get total product
 	public function get_total_product($product_id){
 		$this->db->select('SUM(a.quantity) as total_purchase');
 		$this->db->from('product_purchase_details a');
 		$this->db->where('a.product_id',$product_id);
 		$total_purchase = $this->db->get()->row();
-
 		$this->db->select('SUM(b.quantity) as total_sale');
 		$this->db->from('invoice_details b');
 		$this->db->where('b.product_id',$product_id);
 		$total_sale = $this->db->get()->row();
-
 		$this->db->select('supplier_price,price,supplier_id,tax');
 		$this->db->from('product_information');
 		$this->db->where(array('product_id' => $product_id,'status' => 1)); 
 		$product_information = $this->db->get()->row();
-
 		$data2 = array(
 			'total_product' => ($total_purchase->total_purchase - $total_sale->total_sale), 
 			'supplier_price' => $product_information->supplier_price, 
@@ -472,23 +426,16 @@ class Invoices extends CI_Model {
 			'supplier_id' => $product_information->supplier_id, 
 			'tax' => $product_information->tax, 
 			);
-
 		return $data2;
 	}
-
-
-
-
 	//This function is used to Generate Key
 	public function generator($lenth)
 	{
 		$number=array("1","2","3","4","5","6","7","8","9");
-	
 		for($i=0; $i<$lenth; $i++)
 		{
 			$rand_value=rand(0,8);
 			$rand_number=$number["$rand_value"];
-		
 			if(empty($con))
 			{ 
 			$con=$rand_number;
@@ -513,5 +460,4 @@ class Invoices extends CI_Model {
 		}
 		return $invoice_no;		
 	}
-
 }

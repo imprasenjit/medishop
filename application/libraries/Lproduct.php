@@ -83,10 +83,12 @@ class Lproduct {
 			'product_id' 			=> $product_detail[0]['product_id'],
 			'product_name' 			=> $product_detail[0]['product_name'],
 			'price' 				=> $product_detail[0]['price'],
+			'mrp_price' 			=> $product_detail[0]['mrp_price'],
 			'supplier_price' 		=> $product_detail[0]['supplier_price'],
 			'product_model' 		=> $product_detail[0]['product_model'],
 			'generic_name' 			=> $product_detail[0]['generic_name'],
-			'hsn_code' 			=> $product_detail[0]['hsn_code'],
+			'manufacturer' 			=> $product_detail[0]['manufacturer'],
+			'hsn_code' 				=> $product_detail[0]['hsn_code'],
 			'box_size' 				=> $product_detail[0]['box_size'],
 			'expire_date' 			=> $product_detail[0]['expire_date'],
 			'product_location' 		=> $product_detail[0]['product_location'],
@@ -97,7 +99,7 @@ class Lproduct {
 			'category_list'			=> $category_list,
 			'category_selected'		=> $category_selected,
 			'tax_list'				=>$tax_list,
-			'tax_selected'				=>$tax_selected,
+			'tax_selected'			=>$tax_selected,
 			);
 			//echo '<pre>';print_r($data);die;
 		$chapterList = $CI->parser->parse('product/edit_product_form',$data,true);

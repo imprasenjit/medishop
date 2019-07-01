@@ -67,6 +67,7 @@ class Cproduct extends CI_Controller {
 			'product_id' 			=> $this->generator(8),
 			'product_name' 			=> $this->input->post('product_name'),
 			'generic_name' 			=> $this->input->post('generic_name'),
+			'manufacturer' 			=> $this->input->post('manufacturer'),
 			'hsn_code' 				=> $this->input->post('hsn_code'),
 			'box_size' 				=> $this->input->post('box_size'),
 			'expire_date' 			=> $this->input->post('expire_date'),
@@ -74,14 +75,15 @@ class Cproduct extends CI_Controller {
 			'supplier_id' 			=> $this->input->post('supplier_id'),
 			'category_id' 			=> $this->input->post('category_id'),
 			'price' 				=> $price,
+			'mrp_price' 			=> $this->input->post('mrp_price'),
 			'supplier_price' 		=> $this->input->post('supplier_price'),
-			'tax'					=> $tax,
+			'tax'					=> $tax_percentage,
 			'product_model' 		=> $this->input->post('model'),
 			'product_details' 		=> $this->input->post('description'),
 			'image' 				=> (!empty($image_url)?$image_url:null),
 			'status' 				=> 1
 			);
-
+    	//print_r($this->input->post());die;
 		$result=$CI->lproduct->insert_product($data);
 		if ($result == 1) {
 			$this->session->set_userdata(array('message'=>display('successfully_added')));
@@ -141,18 +143,19 @@ class Cproduct extends CI_Controller {
 		$data=array(
 			'product_id' 			=> $this->generator(8),
 			'product_name' 			=> $this->input->post('product_name'),
+			'generic_name' 			=> $this->input->post('generic_name'),
+			'manufacturer' 			=> $this->input->post('manufacturer'),
 			'supplier_id' 			=> $this->input->post('supplier_id'),
 			'category_id' 			=> $this->input->post('category_id'),
 			'price' 				=> $this->input->post('price'),
+			'mrp_price' 			=> $this->input->post('mrp_price'),
 			'supplier_price' 		=> $this->input->post('supplier_price'),
 			'product_model' 		=> $this->input->post('model'),
 			'product_details' 		=> $this->input->post('description'),
 			'tax' 					=> $this->input->post('tax'),
-			'generic_name' 					=> $this->input->post('generic_name'),
 			'box_size' 				=> $this->input->post('box_size'),
 			'expire_date' 			=> $this->input->post('expire_date'),
 			'product_location' 		=> $this->input->post('product_location'),
-
 			'image' 				=> (!empty($image_url)?$image_url:$old_image),
 			'status' 				=> 1
 		);

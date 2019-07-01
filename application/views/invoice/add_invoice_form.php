@@ -177,6 +177,12 @@
                                         </td>
                                         <td>
                                             <input type="number" name="available_quantity[]" id="" class="form-control text-right available_quantity_1" value="0" readonly="" />
+                                            <input type="hidden" name="manufacturer[]" id="" class="form-control text-right manufacturer_1"  />
+                                            <input type="hidden" name="hsn_code[]" id="" class="form-control text-right hsn_code_1"  />
+                                            <input type="hidden" name="box_size[]" id="" class="form-control text-right box_size_1"  />
+                                            <input type="hidden" name="expire_date[]" id="" class="form-control text-right expire_date_1"  />
+                                            <input type="hidden" name="product_model[]" id="" class="form-control text-right product_model_1"  />
+                                            <input type="hidden" name="mrp_price[]" id="" class="form-control text-right mrp_price_1" />
                                         </td>
                                         <td>
                                             <input type="number" name="product_quantity[]" onkeyup="quantity_calculate(1);" id="total_qntt_1" class="form-control text-right" value="1" min="1" />

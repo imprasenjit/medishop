@@ -10,6 +10,11 @@ APchange = function(event, ui){
     function invoice_productList(cName) {
 		var qnttClass = 'ctnqntt'+cName;
 		var priceClass = 'price_item'+cName;
+		var manufacturerClass = 'manufacturer_'+cName;
+		var hsn_codeClass = 'hsn_code_'+cName;
+		var expire_dateClass = 'expire_date_'+cName;
+		var product_modelClass = 'product_model_'+cName;
+		var mrp_priceClass = 'mrp_price_'+cName;
 		var total_tax_price = 'total_tax_'+cName;
 		var available_quantity = 'available_quantity_'+cName;
         $( ".productSelection" ).autocomplete(
