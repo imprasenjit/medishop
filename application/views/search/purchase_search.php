@@ -34,7 +34,7 @@ function printDiv(divName) {
 		        <div class="panel panel-default">
 		            <div class="panel-body"> 
 						<?php echo form_open('Csearch/purchase_search',array('class' => 'form-inline', ));?>
-							<?php date_default_timezone_set("Asia/Dhaka"); $today = date('Y-m-d'); ?>
+							<?php date_default_timezone_set("Asia/Kolkata"); $today = date('Y-m-d'); ?>
 							<label class="select"><?php echo display('search') ?>:</label>
 							<input type="text" name="what_you_search" class="form-control" placeholder='<?php echo display('what_you_search') ?>' id="what_you_search" >
 							<button type="submit" class="btn btn-primary"><?php echo display('search') ?></button>

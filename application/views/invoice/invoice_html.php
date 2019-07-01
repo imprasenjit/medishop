@@ -67,7 +67,7 @@ function printDiv(divName) {
 	                        <div class="row">
 	                        	{company_info}
 	                            <div class="col-sm-8" style="display: inline-block;width: 64%">
-	                                 <img src="<?php if (isset($Web_settings[0]['invoice_logo'])) {echo $Web_settings[0]['invoice_logo']; }?>" class="img img-responsive" alt="" style="margin-bottom:20px">
+	                                 <img src="<?php if (isset($Web_settings[0]['invoice_logo'])) {echo $Web_settings[0]['invoice_logo']; }?>" class="img img-responsive" alt="" style="width:200px;margin-bottom:20px">
 	                                <br>
 	                                <span class="label label-success-outline m-r-15 p-10" ><?php echo display('billing_from') ?></span>
 	                                <address style="margin-top:10px">
@@ -121,32 +121,50 @@ function printDiv(divName) {
 	                            <table class="table table-striped">
 	                                <thead>
 	                                    <tr>
-	                                        <th><?php echo display('sl') ?></th>
+	                                        <th>(#)</th>
 	                                        <th><?php echo display('product_name') ?></th>
-	                                        <th><?php echo display('quantity') ?></th>
+	                                        <th>mfr</th>
+	                                        <th>HSN</th>
+	                                        <th>Pack</th>
+	                                        <th>Qty</th>
+	                                        <th>Free</th>
+	                                        <th>Batch</th>
+	                                        <th>Exp</th>
 	                                        <th><?php echo display('rate') ?></th>
 	                                        <th><?php echo display('discount') ?></th>
 	                                        <th><?php echo display('ammount') ?></th>
 	                                    </tr>
 	                                </thead>
 	                                <tbody>
-										{invoice_all_data}
+										{invoice_product_data}
 										<tr>
 	                                    	<td>{sl}</td>
-	                                        <td><div><strong>{product_name} - ({product_model})</strong></div></td>
+											<td><div><strong>{product_name} - ({product_model})</strong></div></td>
+											<th>mfr</th>
+	                                        <th>HSN</th>
+	                                        <th>Pack</th>
+	                                        <th>Qty</th>
+	                                        <th>Free</th>
+	                                        <th>Batch</th>
+	                                        <th>Exp</th>
 	                                        <td>{quantity}</td>
 	                                        <td><?php echo (($position==0)?"$currency {rate}":"{rate} $currency") ?></td>
 	                                        <td><?php echo (($position==0)?"$currency {discount}":"{discount} $currency") ?></td>
 	                                        <td><?php echo (($position==0)?"$currency {total_price}":"{total_price} $currency") ?></td>
 	                                    </tr>
-	                                    {/invoice_all_data}
+	                                    {/invoice_product_data}
 	                                </tbody>
 	                            </table>
 	                        </div>
 	                        <div class="row">
 		                        <div class="col-sm-12">
 		                        	<div class="col-sm-8" style="display: inline-block;width: 66%">
-		                                <p><?php echo display('invoice_description')?></p>
+										<p><h3>Terms & Conditions</h3>
+										Goods once sold will not be taken back or exchanged.<br/>
+										Bills not paid due date will attract 24% interest.<br/>
+										All disputes subject to  Karimganj Jurisdication only.<br/>
+										All disputes subject to  Jurisdication only.<br/>
+									</p>
 		                                <p><strong><?php echo display('thank_you_for_choosing_us')?></strong></p>
 		                            </div>
 

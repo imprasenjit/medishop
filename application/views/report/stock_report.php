@@ -37,7 +37,7 @@ function printDiv(divName) {
 		        <div class="panel panel-default">
 		            <div class="panel-body"> 
 						<?php echo form_open('Creport',array('class' => 'form-inline', ));?>
-							<?php date_default_timezone_set("Asia/Dhaka"); $today = date('Y-m-d'); ?>
+							<?php date_default_timezone_set("Asia/Kolkata"); $today = date('Y-m-d'); ?>
 							<label class="select"><?php echo display('search_by_product') ?>:</label>
 							<input type="text" name="product_name" onclick="producstList();" class="form-control productSelection" placeholder='<?php echo display('product_name') ?>' id="product_name" >
 							<input type="hidden" class="autocomplete_hidden_value" name="product_id" id="SchoolHiddenId"/>

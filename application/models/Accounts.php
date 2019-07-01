@@ -10,7 +10,7 @@ class Accounts extends CI_Model {
 	{
 		parent::__construct();
 		
-		date_default_timezone_set('Asia/Dhaka');
+		date_default_timezone_set('Asia/Kolkata');
 		$this->todays_date = date("Y-m-d")." 00:00:00";
 	}
         

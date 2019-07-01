@@ -158,11 +158,12 @@ class Linvoice {
 			'paid_amount'		=>	$invoice_detail[0]['paid_amount'],
 			'due_amount'		=>	$invoice_detail[0]['due_amount'],
 			'subTotal_quantity'	=>	$subTotal_quantity,
-			'invoice_all_data'	=>	$invoice_detail,
+			'invoice_product_data'	=>	$invoice_detail,
 			'company_info'	=>	$company_info,
 			'currency' => $currency_details[0]['currency'],
 			'position' => $currency_details[0]['currency_position'],
 			);
+			echo '<pre>';print_r($data);die;
 		$chapterList = $CI->parser->parse('invoice/invoice_html',$data,true);
 		return $chapterList;
 	}

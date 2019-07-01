@@ -16,7 +16,7 @@
 		<tr>
 			<th colspan="3">&nbsp;</th>
 			<th colspan="3"><span style="font-weight:bold;font-size:15px;text-align:right !important;">MEMO</span></th>
-			<th colspan="3"><?php date_default_timezone_set('Asia/Dhaka');$s = date("M-d-Y g:i:s A", time()); print_r($s); ?></th>
+			<th colspan="3"><?php date_default_timezone_set('Asia/Kolkata');$s = date("M-d-Y g:i:s A", time()); print_r($s); ?></th>
 		</tr>
 		<tr>
 			<th>Date </th>

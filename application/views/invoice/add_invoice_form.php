@@ -146,7 +146,7 @@
                                 <div class="form-group row">
                                     <label for="date" class="col-sm-4 col-form-label"><?php echo display('date') ?> <i class="text-danger">*</i></label>
                                     <div class="col-sm-8">
-                                       <?php date_default_timezone_set("Asia/Dhaka"); $date = date('Y-m-d'); ?>
+                                       <?php date_default_timezone_set("Asia/Kolkata"); $date = date('Y-m-d'); ?>
                                         <input class="form-control" type="text" size="50" name="invoice_date" id="date" required value="<?php echo $date; ?>" />
                                     </div>
                                 </div>
@@ -231,7 +231,7 @@
                                     </tr>
                                     <tr>
                                         <td align="center">
-                                            <input type="button" id="add-invoice" class="btn btn-primary payment_button" name="add-invoice" value="<?php echo display('payment_method') ?>" onClick="payment_method('payment')"/>
+                                           <!-- <input type="button" id="add-invoice" class="btn btn-primary payment_button" name="add-invoice" value="<?php echo display('payment_method') ?>" onClick="payment_method('payment')"/>-->
                                         </td>
                                
 
@@ -240,7 +240,7 @@
                                             <input type="text" id="dueAmmount" class="form-control text-right" name="due_amount" value="0.00" readonly="readonly"/>
                                         </td>
                                     </tr>
-                                    <tr class="payment_method" style="display: none">
+                                    <!--<tr class="payment_method" style="display: none">
                                         <td colspan="6">
                                             <div class="row">
                                                 <div class="col-sm-7">
@@ -287,7 +287,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr>-->
                                 </tfoot>
                             </table>
                         </div>

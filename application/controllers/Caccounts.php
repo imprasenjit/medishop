@@ -716,7 +716,7 @@ class Caccounts extends CI_Controller {
     // Add daily closing 
     public function add_daily_closing()
 	{
-		date_default_timezone_set('Asia/Dhaka');
+		date_default_timezone_set('Asia/Kolkata');
 		$todays_date = date("Y-m-d H:i:s");
 		
 		$data = array(
@@ -740,7 +740,7 @@ class Caccounts extends CI_Controller {
 		$CI =& get_instance();
 		$this->auth->check_admin_auth();
 		$CI->load->model('Closings');
-		date_default_timezone_set('Asia/Dhaka');
+		date_default_timezone_set('Asia/Kolkata');
 		$todays_date = date("Y-m-d");
 		
 		$data = array(
@@ -762,7 +762,7 @@ class Caccounts extends CI_Controller {
 		$CI =& get_instance();
 		$this->auth->check_admin_auth();
 		$CI->load->model('Closings');
-		date_default_timezone_set('Asia/Dhaka');
+		date_default_timezone_set('Asia/Kolkata');
 		$todays_date = date("Y-m-d");
 		
 		$data = array(
@@ -784,7 +784,7 @@ class Caccounts extends CI_Controller {
 		$CI =& get_instance();
 		$this->auth->check_admin_auth();
 		$CI->load->model('Closings');
-		date_default_timezone_set('Asia/Dhaka');
+		date_default_timezone_set('Asia/Kolkata');
 		$todays_date = date("Y-m-d");
 		
 		$data = array(
