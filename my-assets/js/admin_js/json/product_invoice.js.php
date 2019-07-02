@@ -15,6 +15,7 @@ APchange = function(event, ui){
 		var expire_dateClass = 'expire_date_'+cName;
 		var product_modelClass = 'product_model_'+cName;
 		var mrp_priceClass = 'mrp_price_'+cName;
+		var box_sizeClass = 'box_size_'+cName;
 		var total_tax_price = 'total_tax_'+cName;
 		var available_quantity = 'available_quantity_'+cName;
         $( ".productSelection" ).autocomplete(
@@ -48,6 +49,12 @@ APchange = function(event, ui){
 							$('.'+priceClass).val(obj.price);
 							$('.'+total_tax_price).val(obj.tax);
 							$('.'+available_quantity).val(obj.total_product);
+							$('.'+manufacturerClass).val(obj.manufacturer);
+							$('.'+hsn_codeClass).val(obj.hsn_code);
+							$('.'+expire_dateClass).val(obj.expire_date);
+							$('.'+product_modelClass).val(obj.product_model);
+							$('.'+mrp_priceClass).val(obj.mrp_price);
+							$('.'+box_sizeClass).val(obj.box_size);
 							
 							//This Function Stay on others.js page
 							quantity_calculate(cName);

@@ -415,7 +415,7 @@ class Invoices extends CI_Model {
 		$this->db->from('invoice_details b');
 		$this->db->where('b.product_id',$product_id);
 		$total_sale = $this->db->get()->row();
-		$this->db->select('supplier_price,price,supplier_id,tax');
+		$this->db->select('manufacturer,hsn_code,box_size,expire_date,mrp_price,product_model,supplier_price,price,supplier_id,tax');
 		$this->db->from('product_information');
 		$this->db->where(array('product_id' => $product_id,'status' => 1)); 
 		$product_information = $this->db->get()->row();
@@ -425,6 +425,12 @@ class Invoices extends CI_Model {
 			'price' => $product_information->price, 
 			'supplier_id' => $product_information->supplier_id, 
 			'tax' => $product_information->tax, 
+			'manufacturer' => $product_information->manufacturer, 
+			'hsn_code' => $product_information->hsn_code, 
+			'box_size' => $product_information->box_size, 
+			'expire_date' => $product_information->expire_date, 
+			'mrp_price' => $product_information->mrp_price, 
+			'product_model' => $product_information->product_model, 
 			);
 		return $data2;
 	}
