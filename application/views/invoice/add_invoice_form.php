@@ -122,7 +122,7 @@
 
                             <div class="col-sm-8" id="payment_from_2">
                                <div class="form-group row">
-                                    <label for="customer_name_others" class="col-sm-3 col-form-label"><?php echo display('payee_name') ?> <i class="text-danger">*</i></label>
+                                    <label for="customer_name_others" class="col-sm-3 col-form-label"><?php echo display('customer_name') ?> <i class="text-danger">*</i></label>
                                     <div class="col-sm-6">
                                        <input  autofill="off" type="text"  size="100" name="customer_name_others" placeholder='<?php echo display('payee_name') ?>' id="customer_name_others" class="form-control" />
                                     </div>
@@ -204,7 +204,7 @@
                                             <input type="hidden" id="total_tax_1" class="total_tax_1" />
                                             <input type="hidden" id="all_tax_1" class=" total_tax"/>
                                             <!-- Tax calculate end -->
-                                            <button style="text-align: right;" class="btn btn-danger" type="button" value="<?php echo display('delete')?>" onclick="deleteRow(this)"><?php echo display('delete')?></button>
+                                            <a class="btn btn-primary btn-circle" onClick="addInputField('addinvoiceItem');"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -217,7 +217,7 @@
                                     </tr>
                                     <tr>
                                         <td align="center">
-                                            <input type="button" id="add-invoice-item" class="btn btn-info" name="add-invoice-item"  onClick="addInputField('addinvoiceItem');" value="<?php echo display('add_new_item') ?>" />
+                                            <!--<input type="button" id="add-invoice-item" class="btn btn-info" name="add-invoice-item"  onClick="addInputField('addinvoiceItem');" value="<?php echo display('add_new_item') ?>" />-->
                                             <input type="hidden" name="baseUrl" class="baseUrl" value="<?php echo base_url();?>"/>
                                         </td>
                                         <td colspan="4"  style="text-align:right;"><b><?php echo display('grand_total') ?>:</b></td>

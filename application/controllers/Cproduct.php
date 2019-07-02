@@ -257,4 +257,19 @@ class Cproduct extends CI_Controller {
 			return $con;
 		}
 	}
+
+	public function update()
+	{
+		$this->db->select('*');
+		$this->db->from('product_information');
+		$this->db->where('status',1);
+		$query = $this->db->get();
+		foreach ($query->result() as $row) {
+			$json_product[] = array('label'=>$row->product_name."-(".$row->product_model.")",'value'=>$row->product_id);
+		}
+		$cache_file = './my-assets/js/admin_js/json/product.json';
+		$productList = json_encode($json_product);
+		file_put_contents($cache_file,$productList);
+		return TRUE;
+	}
 }
