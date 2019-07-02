@@ -161,6 +161,7 @@
                                         <th class="text-center"><?php echo display('available_quantity') ?></th>
                                         <th class="text-center"><?php echo display('quantity') ?> <i class="text-danger">*</i></th>
                                         <th class="text-center"><?php echo display('rate') ?> <i class="text-danger">*</i></th>
+                                        <th class="text-center"><?php echo display('tax') ?> <i class="text-danger">*</i></th>
                                         <th class="text-center"><?php echo display('discount') ?> </th>
                                         <th class="text-center"><?php echo display('total') ?> <i class="text-danger">*</i></th>
                                         <th class="text-center"><?php echo display('action') ?></th>
@@ -188,7 +189,10 @@
                                             <input type="number" name="product_quantity[]" onkeyup="quantity_calculate(1);" id="total_qntt_1" class="form-control text-right" value="1" min="1" />
                                         </td>
                                         <td>
-                                            <input type="number" name="product_rate[]" readonly="" value="0.00" id="price_item_1" class="price_item1 form-control text-right" />
+                                            <input type="number" name="product_rate[]" onkeyup="quantity_calculate(1);" id="price_item_1" class="price_item1 form-control text-right" />
+                                        </td>
+                                        <td>
+                                            <input type="number" name="tax_rate[]" readonly="" id="total_tax_1" class="total_tax_1 form-control text-right" />
                                         </td>
                                         <!-- Discount -->
                                         <td>
@@ -200,27 +204,25 @@
                                         </td>
 
                                          <td>
-                                            <!-- Tax calculate start-->
-                                            <input type="hidden" id="total_tax_1" class="total_tax_1" />
-                                            <input type="hidden" id="all_tax_1" class=" total_tax"/>
+                                            <input type="hidden" id="all_tax_1" class="total_tax"/>
                                             <!-- Tax calculate end -->
                                             <a class="btn btn-primary btn-circle" onClick="addInputField('addinvoiceItem');"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
-                                    <tr>
-                                        <td style="text-align:right;" colspan="5"><b><?php echo display('total_tax') ?>:</b></td>
+                                    <!--<tr>
+                                        <td style="text-align:right;" colspan="6"><b><?php echo display('total_tax') ?>:</b></td>
                                         <td class="text-right">
                                             <input type="text" id="total_tax_ammount" tabindex="-1" class="form-control text-right" name="total_tax" tabindex="-1" value="0.00" readonly="readonly" />
                                         </td>
-                                    </tr>
+                                    </tr>-->
                                     <tr>
                                         <td align="center">
                                             <!--<input type="button" id="add-invoice-item" class="btn btn-info" name="add-invoice-item"  onClick="addInputField('addinvoiceItem');" value="<?php echo display('add_new_item') ?>" />-->
                                             <input type="hidden" name="baseUrl" class="baseUrl" value="<?php echo base_url();?>"/>
                                         </td>
-                                        <td colspan="4"  style="text-align:right;"><b><?php echo display('grand_total') ?>:</b></td>
+                                        <td colspan="5"  style="text-align:right;"><b><?php echo display('grand_total') ?>:</b></td>
                                         <td class="text-right">
                                             <input type="text" id="grandTotal" tabindex="-1" class="form-control text-right" name="grand_total_price" value="0.00" readonly="readonly" />
                                         </td>
@@ -229,7 +231,7 @@
                                         <td align="center">
                                            <input type="submit" id="add-invoice" class="btn btn-success" name="add-invoice" value="<?php echo display('save_and_paid') ?>" />
                                         </td>
-                                        <td style="text-align:right;" colspan="4"><b><?php echo display('paid_ammount') ?>:</b></td>
+                                        <td style="text-align:right;" colspan="5"><b><?php echo display('paid_ammount') ?>:</b></td>
                                         <td class="text-right">
                                             <input type="text" id="paidAmount" 
                                             onkeyup="invoice_paidamount();"  tabindex="-1" class="form-control text-right" name="paid_amount" value="0.00" />
@@ -241,7 +243,7 @@
                                         </td>
                                
 
-                                        <td style="text-align:right;" colspan="4"><b><?php echo display('due') ?>:</b></td>
+                                        <td style="text-align:right;" colspan="5"><b><?php echo display('due') ?>:</b></td>
                                         <td class="text-right">
                                             <input type="text" id="dueAmmount" class="form-control text-right" name="due_amount" value="0.00" readonly="readonly"/>
                                         </td>

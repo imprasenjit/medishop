@@ -3,7 +3,7 @@ function addInputField(t) {
     else {
         var a = "product_name" + count,
             e = document.createElement("tr");
-        e.innerHTML = "<td><input type='text' name='product_name' onkeypress='invoice_productList(" + count + ");' class='form-control productSelection' placeholder='Product Model' id='" + a + "' required><input type='hidden' class='autocomplete_hidden_value  product_id_" + count + "' name='product_id[]' id='SchoolHiddenId'/></td> <td><input type='number' name='available_quantity[]' id='' class='form-control text-right available_quantity_" + count + "' value='0' readonly='' /><input type='hidden' name='manufacturer[]' class='form-control text-right manufacturer_"+count+"'  /><input type='hidden' name='hsn_code[]' class='form-control text-right hsn_code_"+count+"'  /><input type='hidden' name='box_size[]'  class='form-control text-right box_size_"+count+"'  /><input type='hidden' name='expire_date[]'  class='form-control text-right expire_date_"+count+"'  /><input type='hidden' name='product_model[]'  class='form-control text-right product_model_"+count+"'  /><input type='hidden' name='mrp_price[]'  class='form-control text-right mrp_price_"+count+"' /></td><td class='text-right'><input type='number' name='product_quantity[]' id='total_qntt_" + count + "' onkeyup='quantity_calculate(" + count + "); stockLimit(" + count + ");' class='total_qntt" + count + " form-control text-right' value='1'/></td><td><input type='number' name='product_rate[]' readonly value='0.00' id='price_item_" + count + "' class='price_item" + count + " form-control text-right' required/></td><td><input type='number' name='discount[]' onkeyup='quantity_calculate(" + count + "); stockLimit(" + count + ");' id='discount_" + count + "' class='form-control text-right' placeholder='Discount' /></td><td class='text-right'><input class='total_price form-control text-right' type='text' name='total_price[]' id='total_price_" + count + "' value='0.00' readonly='readonly'/></td><td><input type='hidden' id='total_tax_" + count + "' class='total_tax_" + count + "' /><input type='hidden' id='all_tax_" + count + "' class='total_tax'/><a class='btn btn-danger btn-circle' onclick='deleteRow(this)'><i class='fa fa-times' aria-hidden='true'></i></a></td>", document.getElementById(t).appendChild(e), document.getElementById(a).focus(), count++
+        e.innerHTML = "<td><input type='text' name='product_name' onkeypress='invoice_productList(" + count + ");' class='form-control productSelection' placeholder='Product Model' id='" + a + "' required><input type='hidden' class='autocomplete_hidden_value  product_id_" + count + "' name='product_id[]' id='SchoolHiddenId'/></td> <td><input type='number' name='available_quantity[]' id='' class='form-control text-right available_quantity_" + count + "' value='0' readonly='' /><input type='hidden' name='manufacturer[]' class='form-control text-right manufacturer_"+count+"'  /><input type='hidden' name='hsn_code[]' class='form-control text-right hsn_code_"+count+"'  /><input type='hidden' name='box_size[]'  class='form-control text-right box_size_"+count+"'  /><input type='hidden' name='expire_date[]'  class='form-control text-right expire_date_"+count+"'  /><input type='hidden' name='product_model[]'  class='form-control text-right product_model_"+count+"'  /><input type='hidden' name='mrp_price[]'  class='form-control text-right mrp_price_"+count+"' /></td><td class='text-right'><input type='number' name='product_quantity[]' id='total_qntt_" + count + "' onkeyup='quantity_calculate(" + count + "); stockLimit(" + count + ");' class='total_qntt" + count + " form-control text-right' value='1'/></td><td><input type='number' name='product_rate[]' readonly value='0.00' id='price_item_" + count + "' class='price_item" + count + " form-control text-right' required/></td><td><input type='number' name='tax_rate[]' readonly='' value='0.00' id='total_tax_" + count + "' class='total_tax_" + count + " form-control text-right' /></td><td><input type='number' name='discount[]' onkeyup='quantity_calculate(" + count + "); stockLimit(" + count + ");' id='discount_" + count + "' class='form-control text-right' placeholder='Discount' /></td><td class='text-right'><input class='total_price form-control text-right' type='text' name='total_price[]' id='total_price_" + count + "' value='0.00' readonly='readonly'/></td><td><input type='hidden' id='total_tax_" + count + "' class='total_tax_" + count + "' /><input type='hidden' id='all_tax_" + count + "' class='total_tax'/><a class='btn btn-danger btn-circle' onclick='deleteRow(this)'><i class='fa fa-times' aria-hidden='true'></i></a></td>", document.getElementById(t).appendChild(e), document.getElementById(a).focus(), count++
     }
 }
 
@@ -12,21 +12,24 @@ function quantity_calculate(t) {
         e = $("#price_item_" + t).val(),
         o = $("#discount_" + t).val(),
         l = $("#total_tax_" + t).val();
+    
+    var price_without_tax= parseInt(a * e);
+    var gst=price_without_tax * ((l/2)/100);
     if (a > 0) {
-        var n = a * e;
+        var n =gst+gst+price_without_tax;
         $("#total_price_" + t).val(n);
         var c = a * l;
         $("#all_tax_" + t).val(c)
     } else {
-        var n = a * e;
+        var n = gst+gst+price_without_tax;
         $("#total_price_" + t).val(n), $("#all_tax_" + t).val(l)
     }
     if (o > 0) {
-        var n = a * e - o;
-        $("#total_price_" + t).val(n), $("#total_tax_" + t).val(l)
+        var n = (gst+gst+price_without_tax) - o;
+        $("#total_price_" + t).val(n);
     } else if (0 > o) {
         var n = a * e;
-        $("#total_price_" + t).val(n), $("#total_tax_" + t).val(l)
+        $("#total_price_" + t).val(n);
     }
     calculateSum(), invoice_paidamount()
 }

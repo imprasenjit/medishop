@@ -207,7 +207,7 @@
                 if ($this->session->userdata('user_type') == '1') {
             ?>
 
-            <!-- Accounts menu start -->
+            <!-- Accounts menu start 
             <li class="treeview <?php if ($this->uri->segment('1') == ("Caccounts") || $this->uri->segment('2') == ("table_create") || $this->uri->segment('2') == ("table_list") || $this->uri->segment('2') == ("table_edit")) { echo "active";}else{ echo " ";}?>">
                 <a href="#">
                     <i class="ti-pencil-alt"></i><span><?php echo display('accounts') ?></span>
@@ -228,9 +228,9 @@
                     <li><a href="<?php echo base_url('Caccounts/closing_report/')?>"><?php echo display('closing_report') ?></a></li>
                 </ul>
             </li>
-            <!-- Accounts menu end -->
+            Accounts menu end -->
 
-            <!-- Report menu start -->
+            <!-- Report menu start 
             <li class="treeview <?php if ($this->uri->segment('2') == ("all_report") || $this->uri->segment('2') == ("todays_sales_report") || $this->uri->segment('2') == ("todays_purchase_report") || $this->uri->segment('2') == ("product_sales_reports_date_wise") || $this->uri->segment('2') == ("total_profit_report") ) { echo "active";}else{ echo " ";}?>">
                 <a href="#">
                     <i class="ti-book"></i><span><?php echo display('report') ?></span>
@@ -246,9 +246,9 @@
                     <li><a href="<?php echo base_url('Admin_dashboard/total_profit_report')?>"><?php echo display('profit_report') ?></a></li>
                 </ul>
             </li>
-            <!-- Report menu end -->
+            Report menu end -->
 
-            <!-- Bank menu start -->
+            <!-- Bank menu start 
             <li class="treeview <?php if ($this->uri->segment('2') == ("index") || $this->uri->segment('2') == ("bank_list")) { echo "active";}else{ echo " ";}?>">
                 <a href="#">
                     <i class="ti-briefcase"></i><span><?php echo display('settings') ?></span>
@@ -261,9 +261,9 @@
                     <li><a href="<?php echo base_url('Csettings/bank_list/')?>"><?php echo display('manage_bank') ?></a></li>
                 </ul>
             </li>
-            <!-- Bank menu end -->
+            Bank menu end -->
 
-            <!-- Software Settings menu start -->
+            <!-- Software Settings menu start 
             <li class="treeview <?php if ($this->uri->segment('1') == ("Company_setup") || $this->uri->segment('1') == ("User") || $this->uri->segment('1') == ("Cweb_setting") || $this->uri->segment('1') == ("Language") ) { echo "active";}else{ echo " ";}?>">
                 <a href="#">
                     <i class="ti-settings"></i><span><?php echo display('web_settings') ?></span>
@@ -279,7 +279,7 @@
                     <li><a href="<?php echo base_url('Cweb_setting')?>"><?php echo display('setting') ?> </a></li>
                 </ul>
             </li>
-            <!-- Software Settings menu end -->
+            Software Settings menu end -->
             <?php
                 }
             ?>

@@ -83,7 +83,7 @@
                                 <div class="form-group row">
                                     <label for="box_size" class="col-sm-4 col-form-label"><?php echo display('box_size') ?></label>
                                     <div class="col-sm-8">
-                                        <input class="form-control" name="box_size" type="number" id="box_size" placeholder="<?php echo display('box_size') ?>">
+                                        <input class="form-control" name="box_size" type="text" id="box_size" placeholder="<?php echo display('box_size') ?>">
                                     </div>
                                 </div>
                             </div>

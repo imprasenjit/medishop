@@ -166,6 +166,8 @@ class Invoices extends CI_Model {
 			'customer_id'		=>	$customer_id,
 			'date'				=>	$this->input->post('invoice_date'),
 			'total_amount'		=>	$this->input->post('grand_total_price'),
+			'paid_amount'			=>	$this->input->post('paid_amount'),
+			'due_amount'        =>	$this->input->post('due_amount'),
 			'invoice'			=>	$this->number_generator(),
 			'status'			=>	1
 		);
@@ -198,6 +200,13 @@ class Invoices extends CI_Model {
 		$total_amount = $this->input->post('total_price');
 		$discount = $this->input->post('discount');
 		$available_quantity = $this->input->post('available_quantity');
+		$product_manufacturer = $this->input->post('manufacturer');
+		$product_hsn_code = $this->input->post('hsn_code');
+		$product_box_size = $this->input->post('box_size');
+		$product_expire_date = $this->input->post('expire_date');
+		$product_mrp_price = $this->input->post('mrp_price');
+		$product_product_model = $this->input->post('product_model');
+		$product_tax = $this->input->post('tax_rate');
 		$quantity = $this->input->post('product_quantity');
 		$result = array();
 		foreach($quantity as $k => $v)
@@ -208,10 +217,19 @@ class Invoices extends CI_Model {
 		       redirect('Cinvoice');
 		    }
 		}
+		//echo '<pre>';
+		//print_r($this->input->post());die;
 		for ($i=0, $n=count($quantity); $i < $n; $i++) {
 			$product_quantity = $quantity[$i];
+			$manufacturer = $product_manufacturer[$i];
+			$hsn_code = $product_hsn_code[$i];
+			$box_size = $product_box_size[$i];
+			$expire_date = $product_expire_date[$i];
+			$mrp_price = $product_mrp_price[$i];
+			$product_model = $product_product_model[$i];
 			$product_rate = $rate[$i];
 			$product_id = $p_id[$i];
+			$tax=$product_tax[$i];
 			$discount_rate = $discount[$i];
 			$total_price = $total_amount[$i];
 			$supplier_rate=$this->supplier_rate($product_id);
@@ -220,9 +238,15 @@ class Invoices extends CI_Model {
 				'invoice_id'			=>	$invoice_id,
 				'product_id'			=>	$product_id,
 				'quantity'				=>	$product_quantity,
+				'manufacturer'			=>	$manufacturer,
+				'hsn_code'				=>	$hsn_code,
+				'box_size'				=>	$box_size,
+				'expire_date'			=>	$expire_date,
+				'product_model'			=>	$product_model,
+				'mrp_price'				=>	$mrp_price,
 				'rate'					=>	$product_rate,
 				'discount'           	=>	$discount_rate,
-				'tax'           		=>	$this->input->post('total_tax'),
+				'tax'           		=>	$tax,
 				'supplier_rate'         =>	$supplier_rate[0]['supplier_price'],
 				'total_price'           =>	$total_price,
 				'status'				=>	1
