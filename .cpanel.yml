@@ -1,0 +1,8 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/prasecte/public_html/netrotechnologies.com/pharmacy/
+ - /bin/cp -R application $DEPLOYPATH
+ - /bin/cp -R assets $DEPLOYPATH
+ - /bin/cp -R my-assets $DEPLOYPATH
+ - /bin/cp .htaccess $DEPLOYPATH
