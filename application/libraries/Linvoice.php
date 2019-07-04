@@ -138,8 +138,8 @@ class Linvoice {
 				$subTotal_discount = $subTotal_discount+$invoice_detail[$k]['discount'];
 				$price=intval($invoice_detail[$k]["rate"])*intval($invoice_detail[$k]["quantity"]);
 				$tax_half=$invoice_detail[$k]["tax"]/2;
-				$invoice_detail[$k]["cgst"]=($price*$tax_half)/100;
-				$invoice_detail[$k]["sgst"]=($price*$tax_half)/100;
+				$invoice_detail[$k]["cgst"]=round(($price*$tax_half)/100,2);
+				$invoice_detail[$k]["sgst"]=round(($price*$tax_half)/100,2);
 			}
 			$i=0;
 			foreach($invoice_detail as $k=>$v){$i++;
