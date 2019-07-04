@@ -121,14 +121,15 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
 										<th>mfr</th>
 										<th>HSN</th>
 										<th>Pack</th>
-										<th>Qty</th>
 										<th>Free</th>
 										<th>Batch</th>
 										<th>Exp</th>
-										<th>Tax</th>
+										<th>Qty</th>
 										<th><?php echo display('rate') ?></th>
+										<th>Cgst</th>										
+										<th>Sgst</th>										
 										<th><?php echo display('discount') ?></th>
-										<th class="text-right"><?php echo display('ammount') ?></th>
+										<th class="text-right"><?php echo display('total') ?></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -138,15 +139,16 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
 										<td>
 											<div><strong>{product_name} - ({product_model})</strong></div>
 										</td>
-										<th>{manufacturer}</th>
-										<th>{hsn_code}</th>
-										<th>{box_size}</th>
-										<th>{quantity}</th>
-										<th>0</th>
-										<th>{product_model}</th>
-										<th>{expire_date}</th>
-										<th>{tax}</th>
+										<td>{manufacturer}</td>
+										<td>{hsn_code}</td>
+										<td>{box_size}</td>
+										<td>0</td>
+										<td>{product_model}</td>
+										<td>{expire_date}</td>
+										<td>{quantity}</td>
 										<td><?php echo (($position == 0) ? "$currency {rate}" : "{rate} $currency") ?></td>
+										<td><?php echo (($position == 0) ? "$currency {cgst}" : "{cgst} $currency") ?></td>
+										<td><?php echo (($position == 0) ? "$currency {sgst}" : "{sgst} $currency") ?></td>										
 										<td><?php echo (($position == 0) ? "$currency {discount}" : "{discount} $currency") ?></td>
 										<td class="text-right"><?php echo (($position == 0) ? "$currency {total_price}" : "{total_price} $currency") ?></td>
 									</tr>
@@ -167,7 +169,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
 												<td class="text-right" style="border-top: 0; border-bottom: 0;"><?php echo (($position == 0) ? "$currency {tax}" : "{tax} $currency") ?> </td>
 											</tr>-->
 										<?php } ?>
-										<tr><td colspan="11"></td>
+										<tr><td colspan="12"></td>
 											<th  class="grand_total"><?php echo display('grand_total') ?> :</th>
 											<td class="text-right" class="grand_total"><?php echo (($position == 0) ? "$currency {total_amount}" : "{total_amount} $currency") ?></td>
 										</tr>

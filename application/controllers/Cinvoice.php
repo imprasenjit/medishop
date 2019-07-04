@@ -140,7 +140,8 @@ class Cinvoice extends CI_Controller {
 		$CI =& get_instance();
 		$CI->auth->check_admin_auth();
 		$CI->load->library('linvoice');
-		$content = $CI->linvoice->pos_invoice_html_data($invoice_id);		
+		$content = $CI->linvoice->invoice_html_data($invoice_id);		
+		//$content = $CI->linvoice->pos_invoice_html_data($invoice_id);		
 		$this->template->full_admin_html_view($content);
 	}
 	
