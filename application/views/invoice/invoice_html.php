@@ -126,6 +126,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
 										<th>Exp</th>
 										<th>Qty</th>
 										<th><?php echo display('rate') ?></th>
+										<th><?php echo display('tax') ?></th>
 										<th>Cgst</th>										
 										<th>Sgst</th>										
 										<th><?php echo display('discount') ?></th>
@@ -147,6 +148,7 @@ $Web_settings = $CI->Web_settings->retrieve_setting_editdata();
 										<td>{expire_date}</td>
 										<td>{quantity}</td>
 										<td><?php echo (($position == 0) ? "$currency {rate}" : "{rate} $currency") ?></td>
+										<td>{tax}%</td>
 										<td><?php echo (($position == 0) ? "$currency {cgst}" : "{cgst} $currency") ?></td>
 										<td><?php echo (($position == 0) ? "$currency {sgst}" : "{sgst} $currency") ?></td>										
 										<td><?php echo (($position == 0) ? "$currency {discount}" : "{discount} $currency") ?></td>
