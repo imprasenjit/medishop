@@ -200,7 +200,7 @@
     //Product select by ajax end
 
     //Product selection start
-    $('body').on('change', '.productSelection', function(){
+    /* $('body').on('change', '.productSelection', function(){
         var product_id = $(this).val();  
         var base_url = $('.baseUrl').val(); 
         var target = $(this).parent().parent().children().next().next().children();
@@ -217,7 +217,7 @@
             } 
         });
     });
-    //Product selection end
+     *///Product selection end
 </script>
 
 
