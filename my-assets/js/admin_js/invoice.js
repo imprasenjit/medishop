@@ -61,7 +61,7 @@ function stockLimit(t) {
     var a = $("#total_qntt_" + t).val(),
         e = $(".product_id_" + t).val(),
         o = $(".baseUrl").val();
-    $.ajax({
+        Pace.track(function () {$.ajax({
         type: "POST",
         url: o + "Cinvoice/product_stock_check",
         data: {
@@ -74,14 +74,15 @@ function stockLimit(t) {
                 alert(o), $("#qty_item_" + t).val("0"), $("#total_qntt_" + t).val("0"), $("#total_price_" + t).val("0")
             }
         }
-    })
+    });
+    });
 }
 
 function stockLimitAjax(t) {
     var a = $("#total_qntt_" + t).val(),
         e = $(".product_id_" + t).val(),
         o = $(".baseUrl").val();
-    $.ajax({
+        Pace.track(function () {$.ajax({
         type: "POST",
         url: o + "Cinvoice/product_stock_check",
         data: {
@@ -94,7 +95,8 @@ function stockLimitAjax(t) {
                 alert(o), $("#qty_item_" + t).val("0"), $("#total_qntt_" + t).val("0"), $("#total_price_" + t).val("0.00"), calculateSum()
             }
         }
-    })
+    });
+    });
 }
 
 function deleteRow(t) {
