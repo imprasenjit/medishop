@@ -98,7 +98,7 @@ class Cpurchase extends CI_Controller {
         	echo "No Product Found !";
 	    }else{
 	    	// Select option created for product
-	        echo "<select name=\"product_id[]\"  onChange=\"purchase_productList(1);\" class=\"productSelection js-example-basic-single form-control\" id=\"product_id\">";
+	        echo "<select name=\"product_id[]\"  class=\"productSelection js-example-basic-single form-control\" id=\"product_id\">";
 	        	echo "<option value=\"0\">".display('select_one')."</option>";
 	        	foreach ($content as $product) {
 	    			echo "<option value=".$product['product_id'].">";
