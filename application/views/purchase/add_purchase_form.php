@@ -185,7 +185,7 @@
         event.preventDefault(); 
         var supplier_id=$('#supplier_sss').val();
         var csrf_test_name=  $("[name=csrf_test_name]").val();
-        $.ajax({
+        Pace.track(function () {$.ajax({
             url: '<?php echo base_url('Cpurchase/product_search_by_supplier')?>',
             type: 'post',
             data: {supplier_id:supplier_id,csrf_test_name:csrf_test_name}, 
@@ -196,6 +196,7 @@
                  alert('failed');
             }
         });        
+        });        
     });
     //Product select by ajax end
 
@@ -205,7 +206,7 @@
         var base_url = $('.baseUrl').val(); 
         var target = $(this).parent().parent().children().next().next().children();
         var csrf_test_name=  $("[name=csrf_test_name]").val();
-        $.ajax
+        Pace.track(function () {$.ajax
         ({
             url: base_url+"Cinvoice/retrieve_product_data",
             data: {product_id:product_id,csrf_test_name:csrf_test_name},
@@ -215,6 +216,7 @@
                obj = JSON.parse(data);
                target.val(obj.supplier_price);    
             } 
+        });
         });
     });
     //Product selection end

@@ -27,7 +27,7 @@
             ajax:true,
             restartOnRequestAfter: true,
             document: true, // disabled
-            eventLag: true, // disabled
+            eventLag: false, // disabled
         };
         Pace.start();
     </script>
