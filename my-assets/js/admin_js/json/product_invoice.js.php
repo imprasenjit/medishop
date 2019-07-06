@@ -36,8 +36,8 @@ APchange = function(event, ui){
 				var base_url = $('.baseUrl').val();
 
 				
-				$.ajax
-				   ({
+				Pace.track(function () {
+					$.ajax({
 						type: "POST",
 						url: base_url+"Cinvoice/retrieve_product_data",
 						data: dataString,
@@ -60,6 +60,7 @@ APchange = function(event, ui){
 							quantity_calculate(cName);
 							
 						} 
+					});
 					});
 				
 				$(this).unbind("change");
