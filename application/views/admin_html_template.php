@@ -24,7 +24,10 @@
     <script>
         paceOptions = {
             elements: true,
-            ajax:true
+            ajax:true,
+            restartOnRequestAfter: true,
+            document: true, // disabled
+            eventLag: true, // disabled
         };
         Pace.start();
     </script>
