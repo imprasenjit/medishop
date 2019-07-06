@@ -64,6 +64,9 @@
     <!-- jQuery -->
 
     <script src="<?php echo base_url() ?>assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script>
+    $(document).ajaxStart(function() { Pace.restart(); });
+    </script>
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="se-pre-con"></div>
