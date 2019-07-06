@@ -20,6 +20,14 @@
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="<?php echo base_url() ?>assets/dist/img/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="<?php echo base_url() ?>assets/dist/img/ico/apple-touch-icon-144-precomposed.png">
     <!-- Start Global Mandatory Style-->
+    <script src="<?php echo base_url() ?>assets/js/pace.min.js" type="text/javascript"></script>
+    <script>
+        paceOptions = {
+            elements: true,
+            ajax:true
+        };
+        Pace.start();
+    </script>
     <!-- jquery-ui css -->
     <link href="<?php echo base_url() ?>assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
     <!-- Bootstrap -->
@@ -51,13 +59,7 @@
     }
     ?>
     <!-- jQuery -->
-    <script src="<?php echo base_url() ?>assets/js/pace.min.js" type="text/javascript"></script>
-    <script>
-        paceOptions = {
-            elements: true
-        };
-        Pace.start();
-    </script>
+
     <script src="<?php echo base_url() ?>assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
 </head>
 <body class="hold-transition sidebar-mini">
